@@ -34,14 +34,14 @@ public class LeeCode169 {
     //摩尔算法实现（抵消）
     public int majorityElement(int[] arr){
         ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (result.isEmpty()){
-                result.add(arr[i]);
-            }else{
-                if (result.get(result.size() - 1) != arr[i]){
+        for (int value : arr) {
+            if (result.isEmpty()) {
+                result.add(value);
+            } else {
+                if (result.get(result.size() - 1) != value) {
                     result.remove(result.size() - 1);
-                }else{
-                    result.add(arr[i]);
+                } else {
+                    result.add(value);
                 }
             }
         }
