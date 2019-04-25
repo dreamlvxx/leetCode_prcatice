@@ -19,6 +19,7 @@
  * 合并两个有序链表               {@link LeeCode21}
  * 二叉树的最大深度               {@link LeeCode104}
  * 找出单独的一个                 {@link LeeCode136}
+ * 摩尔投票算法                   {@link LeeCode169} favorite
  * 翻转一个二叉树                 {@link LeeCode226}
  * 将数组中的0移到末尾            {@link LeeCode283}
  * 一个数组不存在的数             {@link LeeCode448}
