@@ -18,6 +18,8 @@
  * 删除倒数第几个结点             {@link LeeCode19}
  * 合并两个有序链表               {@link LeeCode21}
  * 二叉树的最大深度               {@link LeeCode104}
+ * 买卖的最佳时机                 {@link LeeCode121} good
+ * 蓄水池最大容量                 {@link MaxWater}
  * 找出单独的一个                 {@link LeeCode136}
  * 摩尔投票算法                   {@link LeeCode169} favorite
  * 翻转一个二叉树                 {@link LeeCode226}
@@ -25,8 +27,10 @@
  * 一个数组不存在的数             {@link LeeCode448}
  * 两个int值的二进制不同位的个数  {@link LeeCode461}
  * Convert BST to Greater Tree    {@link LeeCode538} favorite difficult
+ * Diameter of Binary Tree        {@link LeeCode543}
  * LeeCode561匹配最小数           {@link LeeCode561}
  * N叉树前序遍历                  {@link LeeCode589}
+ * 求解一个树的最大深度           {@link TreeMaxDepth}
  * N叉树后序遍历                  {@link LeeCode590}
  * 合并两颗二叉树                 {@link LeeCode617}
  * 可以自己除自己每位数           {@link LeeCode728}
@@ -46,5 +50,4 @@
  * 承装最多水                     {@link LeeCode011}
  * 一堆数中寻找三个数字和为0      {@link LeeCode015}
  */
-public class AAACodeList {
-}
+public interface AAACodeList {}
