@@ -14,9 +14,12 @@
  * 跳表实现                       {@link JK17Code01}
  * 计算一个数组的有序度           {@link JK38Code1}
  * 八皇后问题                     {@link JK39Code1}
+ * 背包算法--动态规划解法         {@link JK40Code01}
+ * 背包问题 最大总价值            {@link JK40Code02}
  * KMP算法                        {@link KMP}
+ * 最大公共前缀子串               {@link LeeCode14}
  * 删除倒数第几个结点             {@link LeeCode19}
- * 合并两个有序链表               {@link LeeCode21}
+ * 合并两个有序链表               {@link LeeCode21} favorite
  * 连续串最大和                   {@link LeeCode53} cant
  * 爬楼梯问题                     {@link LeeCode70}
  * 是否为对称二叉树               {@link LeeCode101} cant difficult  {@link BFS} import
@@ -26,11 +29,12 @@
  * 摩尔投票算法                   {@link LeeCode169} favorite
  * 翻转一个二叉树                 {@link LeeCode226}
  * 将数组中的0移到末尾            {@link LeeCode283}
- * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。
+ * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。{@link LeeCode560}关联。
  * 一个数组不存在的数             {@link LeeCode448}
  * 两个int值的二进制不同位的个数  {@link LeeCode461}
  * Convert BST to Greater Tree    {@link LeeCode538} favorite difficult
  * Diameter of Binary Tree        {@link LeeCode543}
+ * 所有和等于给定值的子串         {@link LeeCode560}
  * LeeCode561匹配最小数           {@link LeeCode561}
  * N叉树前序遍历                  {@link LeeCode589}
  * 求解一个树的最大深度           {@link TreeMaxDepth}
@@ -44,9 +48,6 @@
  * 重新排序数组                   {@link LeeCode922}
  * 处理数组                       {@link LeeCode929}
  * 按照规则重拍数组               {@link LeeCode942}
- * 背包算法--动态规划解法         {@link JK40Code01}
- * 背包问题 最大总价值            {@link JK40Code02}
- * 最大公共前缀子串               {@link LeeCode14}
  * 两个数字相加                   {@link LeeCode002}
  * 最长不重复串                   {@link LeeCode003}
  * 在一个字符串中寻找最大回文串   {@link LeeCode005}
