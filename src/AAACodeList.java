@@ -27,6 +27,7 @@
  * 蓄水池最大容量                 {@link MaxWater}
  * 找出单独的一个                 {@link LeeCode136}
  * 摩尔投票算法                   {@link LeeCode169} favorite
+ * 隔间偷                         {@link LeeCode198} cant 类比 {@link LeeCode70}
  * 翻转一个二叉树                 {@link LeeCode226}
  * 将数组中的0移到末尾            {@link LeeCode283}
  * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。{@link LeeCode560}关联。
