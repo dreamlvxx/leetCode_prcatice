@@ -19,16 +19,20 @@
  * KMP算法                        {@link KMP}
  * 最大公共前缀子串               {@link LeeCode14}
  * 删除倒数第几个结点             {@link LeeCode19}
+ * 括号匹配                       {@link LeeCode20}
  * 合并两个有序链表               {@link LeeCode21} favorite
  * 连续串最大和                   {@link LeeCode53} cant
  * 爬楼梯问题                     {@link LeeCode70}
  * 是否为对称二叉树               {@link LeeCode101} cant difficult  {@link BFS} import
  * 买卖的最佳时机                 {@link LeeCode121} good
  * 蓄水池最大容量                 {@link MaxWater}
- * 找出单独的一个                 {@link LeeCode136}
+ * 找出单独的一个                 {@link LeeCode136} favorite
+ * 两个链表交汇结点               {@link LeeCode160} favorite amazing
  * 摩尔投票算法                   {@link LeeCode169} favorite
  * 隔间偷                         {@link LeeCode198} cant 类比 {@link LeeCode70}
+ * 翻转一个链表                   {@link LeeCode206} favorite
  * 翻转一个二叉树                 {@link LeeCode226}
+ * 判断一个链表是否回文           {@link LeeCode234} favorite cant {@link LeeCode206}
  * 将数组中的0移到末尾            {@link LeeCode283}
  * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。{@link LeeCode560}关联。
  * 寻找特殊子串                   {@link LeeCode438} favorite 滑动窗口问题  一系列。重点。

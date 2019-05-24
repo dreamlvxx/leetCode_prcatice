@@ -1,24 +1,54 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * counter是一个控制器
  */
 public class LeeCode438 {
     public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> res = new ArrayList<>();
+        if (p.length() > s.length()) return res;
+        HashMap<Character,Integer> map = new HashMap<>();
+        char[] arr = p.toCharArray();
+        char[] sss = s.toCharArray();
+        int start = 0,end = 0;
 
-
-        return null;
+        for (int i = 0; i < arr.length; i++) {
+            char c = arr[i];
+            map.put(c,map.getOrDefault(c,0) + 1);
+        }
+       int  counter = map.size();
+         while (end < s.length()){
+             char temp = sss[end];
+             if (map.containsKey(temp)){
+                 map.put(temp,map.get(temp) - 1);
+                 if (map.get(temp) == 0){
+                     counter -- ;
+                 }
+             }
+             end ++;
+             while (counter == 0){
+                 char tt = sss[start];
+                 if (map.containsKey(tt)){
+                     map.put(tt,map.get(tt) + 1);
+                     if (map.get(tt) > 0){
+                         counter ++;
+                     }
+                 }
+                 if (end - start == p.length()){
+                     res.add(start);
+                 }
+                 start++;
+             }
+         }
+        return res;
     }
 
     //LeetCode198  Find All Anagrams in a String
-    public List<Integer> findAnagrams1(String s, String t) {
+    public List<Integer> findAnagrams1(String s, String p) {
         List<Integer> result = new LinkedList<>();
-        if (t.length() > s.length()) return result;
+        if (p.length() > s.length()) return result;
         Map<Character, Integer> map = new HashMap<>();
-        for (char c : t.toCharArray()) {
+        for (char c : p.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         int counter = map.size();
@@ -42,7 +72,7 @@ public class LeeCode438 {
                         counter++;
                     }
                 }
-                if (end - begin == t.length()) {
+                if (end - begin == p.length()) {
                     result.add(begin);
                 }
                 begin++;
