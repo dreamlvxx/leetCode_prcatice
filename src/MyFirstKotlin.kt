@@ -24,15 +24,27 @@ class MyFirstKotlin {
         println(a)
     }
 
+    /**
+     * 集合
+     */
     fun collectionC(): List<Int> {
-        var list = arrayOf(1, 2, 3) //kotlin提供一系列的集合生成库
-        var list1 = listOf(1, 2, 2)
+        // array
+        val arrayint = intArrayOf(1,2,3)//数组
+        val arraybyte = byteArrayOf(1,2,3)//各种array类似
+
+        // list-----
+        val list = arrayOf(1, 2, 3) //不可变list
+        var multablelistaa = mutableListOf<String>()//可变list
+        var arraylistaa = arrayListOf<String>()//可变list
+        multablelistaa.add("sad")
+        val list1 = listOf(1, 2, 2)//不可变list
         val map = mapOf("a" to 1, "b" to 2, "c" to 3)
 
         for ((k, v) in map) { //这种方式循环map比较方便
             println("$k -> $v") //这其中的$用作字面量  也就是可以访问相关的属性  相当于引用
         }
 
+        // in 用来遍历循环
         for (i in 10 downTo 1) { //in关键字  用来表示是否存在于取值范围内
             println(i)
         }
@@ -472,12 +484,43 @@ class MyFirstKotlin {
 
         }
     }
+
     fun test34() {
-        val a : MyEnumCLazz4  =  MyEnumCLazz4.valueOf("RED")
+        val a: MyEnumCLazz4 = MyEnumCLazz4.valueOf("RED")
         val aa = MyEnumCLazz4.values()
-        for (i in aa){
+        for (i in aa) {
             println(i.getMes())
         }
 //        println(a.getMes())
     }
+
+
+    /**
+     *  高阶函数   lambda-------------------------------------------------------------
+     */
+    val sum = { aa: Int, bb: Int ->
+        println(aa + bb)
+        aa - bb
+
+        aa + bb }
+
+    val printNumber = { println("number")}
+
+    fun sumLam(f: (Int,Int) -> Int,t:() -> Unit){
+
+    }
+
+    fun getLam(){
+        sumLam(sum,printNumber)//作为参数传入高阶函数
+        sum(1,2)//使用lambda表达式
+        printNumber//使用lambda表达式
+
+    }
+
+    val aalist = listOf<String>()
+    fun listAdd(){
+        aalist
+    }
+
+
 }
