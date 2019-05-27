@@ -42,6 +42,7 @@
  * Diameter of Binary Tree        {@link LeeCode543}
  * 所有和等于给定值的子串         {@link LeeCode560}
  * LeeCode561匹配最小数           {@link LeeCode561}
+ * 最小sort区域                   {@link LeeCode581}
  * N叉树前序遍历                  {@link LeeCode589}
  * 求解一个树的最大深度           {@link TreeMaxDepth}
  * N叉树后序遍历                  {@link LeeCode590}

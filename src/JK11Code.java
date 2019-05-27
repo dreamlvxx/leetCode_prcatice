@@ -58,11 +58,11 @@ public class JK11Code {
      * @param arr
      * @return
      */
-    public void insertSort(int[] arr){
-        for (int i = 1; i < arr.length; i++) {//第一个for循环决定选取哪一个往前面排好的序列插入 ,index 从1 开始，默认第一个排序好了
+    public static void insertSort(int[] arr){
+        for (int i = 1; i < arr.length; ++i) {//第一个for循环决定选取哪一个往前面排好的序列插入 ,index 从1 开始，默认第一个排序好了
             int value = arr[i];//暂时保存i这个位置的值，后面给空位补上
             int j = i - 1;
-            for (; j >=0 ; j--) {
+            for (; j >=0 ; --j) {
                 if (arr[j] > value){//这里用移动，所以从i之前的第一个开始，如果大于i对应的值，那么就往后移动
                     arr[j + 1] = arr[j];
                 }else{
