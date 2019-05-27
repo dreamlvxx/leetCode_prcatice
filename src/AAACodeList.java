@@ -34,6 +34,7 @@
  * 翻转一个二叉树                 {@link LeeCode226}
  * 判断一个链表是否回文           {@link LeeCode234} favorite cant {@link LeeCode206}
  * 将数组中的0移到末尾            {@link LeeCode283}
+ * Counting Bits                  {@link LeeCode338} favorite 运算符的巧用
  * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。{@link LeeCode560}关联。
  * 寻找特殊子串                   {@link LeeCode438} favorite 滑动窗口问题  一系列。重点。
  * 一个数组不存在的数             {@link LeeCode448}
@@ -42,7 +43,7 @@
  * Diameter of Binary Tree        {@link LeeCode543}
  * 所有和等于给定值的子串         {@link LeeCode560}
  * LeeCode561匹配最小数           {@link LeeCode561}
- * 最小sort区域                   {@link LeeCode581}
+ * 最小sort区域                   {@link LeeCode581} favorite 最优解法 O(n)
  * N叉树前序遍历                  {@link LeeCode589}
  * 求解一个树的最大深度           {@link TreeMaxDepth}
  * N叉树后序遍历                  {@link LeeCode590}
