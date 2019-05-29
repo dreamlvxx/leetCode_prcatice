@@ -1,9 +1,147 @@
+@file:JvmName("MyKotlinCompanyObject") //这个可以修改顶级函数生成文件的文件名
 import com.sun.istack.internal.NotNull
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlin.properties.Delegates
 import JK06Code1 as jj //导包可以自己命名
 
+/**
+ * 类型别名--------------------------------------------------------------------------------------------------------
+ * 只能定义在顶层
+ */
+typealias NetNode = MyFirstKotlin.Network.Node
+typealias NodeSet = Set<MyFirstKotlin.Network.Node>
+
+/**
+ * 以下的几个顶级函数 变量，main 都会编辑成一个新的java文件  这个名字可以通过 @file:JvmName("MyKotlinCompanyObject") 修改
+ */
+fun main() {
+    MyFirstKotlin :: class.java //类引用
+    val sad : String? = null
+    val l = sad?.length?: 9
+    val ample : Examplex? = null
+    val aa = ample?.arr?.size?: 88
+    println(aa)
+    //内联函数可以直接return
+    go{ if (it == 1)return}
+}
+class Examplex{
+    val arr : Array<String>? = null
+}
+
+/**
+ * 内联函数 inline标记---------------------------------------------------------------------------------------
+ * 通过替换函数调用出，把调用直接换成真实代码，减少入栈出栈的开销
+ * 发生在编译器，不是运行时
+ */
+inline fun inlineFUnction(){
+
+}
+
+inline fun go(s : (a : Int) -> Unit){
+    var i = 0
+    while (i ++ < 3){
+        s(i)
+    }
+}
+
+//应用 一般在集合遍历返回
+var carr = intArrayOf(1,2,3)
+fun  yyy(){
+    carr.forEach { if (it == 2)return }
+    println("end")//此时当i == 2的时候  直接返回了  这句就不会执行了
+}
+
+/**
+ * 委托-------------------------------------------------------------------------------------------
+ * 这种方式重写的成员不会在委托对象的成员中调用 ，
+ * 委托对象的成员只能访问其自身对接口成员实现
+ * 就是说下面这个继承关系， 父亲属性不会受儿子影响
+ */
+interface Base {
+    val message: String
+    fun print()
+}
+
+class BaseImpl(val x: Int) : Base {
+    override val message = "BaseImpl: x = $x"
+    override fun print() { println(message) }
+}
+
+class Derived(b: Base) : Base by b {
+    // 在 b 的 `print` 实现中不会访问到这个属性
+    override val message = "Message of Derived"
+}
+
+/**
+ * 顶级函数 变量---------------------------------------------------------------------------
+ */
+
+//用const声明的为静态变量
+const val ttt = "sad"
+
+val topStringX : String = "lvxingxing"
+fun topFunction(){
+    println("this is top function")
+}
+
+
+//--------------------------------------------------------------------------------------
 class MyFirstKotlin {
-    //kotlin不需要写  ;  分号结尾
+
+    /**
+     * 操作符--------------------------------------------------------------------------------------------------------------------
+     * == 比较的是结构  相当于a.equals(b)
+     * === 比较是否是相同引用
+     * is !is  相当于instanceof
+     * ?  判断是不是空  空就返回null   bob?.department?.head?.name 任何一个环节为空  就返回null
+     * val l = b?.length ?: -1 可以有选择的返回一个东西
+     */
+
+
+
+    /**
+     * 解构声明----------------------------------------------------------------------------------------------------------------
+     */
+
+    // for ((a, b) in collection) { …… }
+    // { a //-> …… } // 一个参数
+    // { a, b //-> …… } // 两个参数
+    // { (a, b) //-> …… } // 一个解构对
+    // { (a, b), c //-> …… } // 一个解构对以及其他参数
+    //map.mapValues { (_, value): Map.Entry<Int, String> -> "$value!" }
+    //map.mapValues { (_, value: String) -> "$value!" }
+
+    /**
+     * 伴生对象-相当于java中的static-------------------------------------------------------------------------------------
+     */
+
+    companion object{
+        //const声明的为静态
+        const val aaaa = "staticSteing2"
+        @JvmStatic
+        val staticString :String = "staticString"
+        var staticString11 : String = "stsaticString11"
+        @JvmStatic  //这个标记的作用是在java中可以直接类名调用。不加标记的话 只能通过Companion.XXX()来调用
+        fun invokeStaticFunction(){
+            println("this is static functon")
+        }
+
+        fun invokeStaticFunction1(){
+            println("sadasd")
+        }
+    }
+
+    /**
+     * 幕后字段 field-----------------------------------------------------------------------------------------------------
+     */
+    var lvxingxing : String  = ""
+    get() = field
+    set(value) {
+        field =value
+    }
 
     val canNotChange = 1 //val是只读变量 kotlin自动添加了 getter()
     var canChange = 2 //var是可读可写变量 kotlin自动添加了getter() setter()
@@ -24,20 +162,54 @@ class MyFirstKotlin {
         println(a)
     }
 
+    /**
+     * 集合-------------------------------------------------------------------------------------------------------------------
+     */
     fun collectionC(): List<Int> {//方法可以嵌套方法
-        var list = arrayOf(1, 2, 3) //kotlin提供一系列的集合生成库
+        val lista = arrayListOf<String>()//空list
+        val mutiallist = mutableListOf<String>()//空list
+        var listt = arrayOf(1, 2, 3) //kotlin提供一系列的集合生成库
+        val listtt = arrayOf(2,3,4)
         var list1 = listOf(1, 2, 2)
         val map = mapOf("a" to 1, "b" to 2, "c" to 3)
 
+        //copy集合
+        val copyListaa = listt.toList()//copy只读list
+        val copylistaaa = mutiallist.toMutableList()//copy可读写list
+
+        //迭代器
+        val iteratorll = listt.iterator()
+        while (iteratorll.hasNext()){
+            println(iteratorll.next())
+        }
+
+        //for 遍历list
+        for (i in listt){
+            println("$i")
+        }
+        //foreach 遍历list
+        listt.forEach {
+            println(it)//it是隐式指向变量
+        }
+
+        //for 遍历 map
         for ((k, v) in map) { //这种方式循环map比较方便
             println("$k -> $v") //这其中的$用作字面量  也就是可以访问相关的属性  相当于引用
         }
 
+
+        //区间 in
         for (i in 10 downTo 1) { //in关键字  用来表示是否存在于取值范围内
             println(i)
         }
-
         for (i in 10 downTo 1 step 3) println(i) //step用来跳步循环
+
+
+        //集合的一些操作
+        listt.filter { it < 2 }//过滤条件值
+        listt.map { it * 2 }//转换为条件值
+        val mergeList = listt zip listtt
+
 
         val a = hashMapOf<String, String>()
         a.put("a", "22")
@@ -79,16 +251,69 @@ class MyFirstKotlin {
                 }
             }
         }
+        println(listt.filter { x -> x > 1 })
 
-        val asds = "s"
-        when (asds) {
-            is String -> {
-                print("sad")
-            }
-            else -> false
-        }
-        println(list.filter { x -> x > 1 })
         return list1
+    }
+
+    /**
+     * 集合的一些操作
+     */
+     fun optionList(){
+        var listt = arrayOf(1, 2, 3,4,5) //kotlin提供一系列的集合生成库
+        val listtt = arrayOf(7,8,9)
+        //集合的一些操作
+        listt.filter { it < 2 }//过滤条件值
+        listt.map { it * 2 }//转换为条件值
+        val mergeList = listt zip listtt//合并俩集合
+        println(mergeList)
+
+        val mmmap = listOf(1 to "1",2 to "2")
+        println(mmmap)
+        println(mmmap.unzip())
+
+        val numbers = listOf("one", "two", "three", "four","three")
+
+        // plus minus操作符   相当于add remove
+        val plusList = numbers + "five"
+        val minusList = numbers - listOf("three", "four")
+        println(plusList)
+        println(minusList)
+
+        //groupBy操作符  可以根据一定的条件  对集合中的元素进行分组
+        val numbers22 = listOf("one","osss", "two", "three", "four", "five")
+        val number33 = listOf(1,2,3,4,5)
+        println(numbers22.groupBy { it.first().toUpperCase() })//分组条件
+        println(numbers22.groupBy(keySelector = { it.first() }, valueTransform = { it.toUpperCase() }))//keySelector是分组条件，valueTransform是对元素的操作
+        println(numbers22.groupingBy { it.first() }.eachCount())//eachCount可以计算出匹配条件值的元素个数
+        println(numbers22.slice(1..3))//slice取一定区间的元素
+        println("take " + numbers22.take(2))//take 去从开头往后的n个元素
+        println("takelast" +numbers22.takeLast(2))//从后往前取n个元素
+        println("takeWhile" + numbers22.takeWhile { it.startsWith("o") })//取特定条件的元素,如果第一个元素不匹配，就返回空
+        println("takeLastWhile" + numbers22.takeLastWhile { it.startsWith("f") })//去特性条件的元素，如果最后一个不匹配，返回空
+        println("drpo" + numbers22.drop(2))//取除去前n个元素的后面部分
+        println("dropWhile" + numbers22.dropWhile { it.startsWith("u") })//取除了特定条件的元素,如果第一个元素不匹配，全返回
+        println("dropLast" +numbers22.dropLast(2))//取除去后n个元素的前面部分
+        println("dropLastWhile" + numbers22.dropLastWhile { it.startsWith("u") })//取除了特定条件的元素，如果最后一个不匹配，全返回
+        println("chunk" + numbers22.chunked(3))//n个分为一个组
+        println("chunk with condition" +number33.chunked(3){it.sum()})//n个一组，并对这一组数据进行操作
+        println("windowed" + number33.windowed(3))//滑动窗口为3，往后一个一个移动
+        println("windowed with step" + number33.windowed(size = 3,partialWindows = false,step = 2))//step是跳步数,partialWindows决定不够滑动窗口大小的时候是否舍弃
+        println("elementAt" + number33.elementAt(2))//相当于get 和 []
+        println("first" + number33.first())//取第一个
+        println("last" + number33.last())//取最后一个
+        println("empty" + number33.isEmpty() + "not empty" + number33.isNotEmpty())//判空
+        println("contain" + number33.contains(2))//判断有没有
+        println("in" +  (7 in number33))//判断有没有
+
+    }
+
+    /**
+     * 序列
+     * 使用与数据量大的情况下
+     */
+    fun sequ(){
+
     }
 
 
@@ -482,17 +707,68 @@ class MyFirstKotlin {
 //        println(a.getMes())
     }
 
-
-    //lambda表达式
+    /**
+     * lambda表达式------------------------------------------------
+     */
     val lambdaString = "lambda"
     val length: (a: Int,b:Int) -> Int = { a,b ->lambdaString.length + a + b }
-    //完整的lambda表达式
-    val sum = {x: Int,y: Int -> x + y}
     //lambda 表达式总是括在花括号中， 完整语法形式的参数声明放在花括号内，
     // 并有可选的类型标注， 函数体跟在一个 -> 符号之后。
     // 如果推断出的该 lambda 的返回类型不是 Unit，
     // 那么该 lambda 主体中的最后一个（或可能是单个）表达式会视为返回值。
-    val sum1: (Int, Int) -> Int = {x, y -> x+y }//这里x + y相当于return x + y
-    fun sum3(x: Int, y: Int ): Int = x + y
+    val sum = {x: Int,y: Int ->
+        println("ad")
+        x + y}
+
+    //方法作为参数传递
+    fun functionWithfunc(a : String ,ss : (Int,Int) -> Int){
+
+    }
+
+    fun uu(){
+        //lambda作为参数传入
+        functionWithfunc("asd",sum)
+        //调用lambda
+        sum(1,2)
+    }
+
+    /**
+     * 协程-------------------------------------------------------------------------------------------
+     */
+        fun cc(){
+            GlobalScope.launch { // 在后台启动一个新的协程并继续
+                delay(1000L) // 【非阻塞】   的等待 1 秒钟（默认时间单位是毫秒）
+                println("World!") // 在延迟后打印输出
+            }
+            println("Hello,") // 协程已在等待时主线程还在继续
+            Thread.sleep(2000L) // 【阻塞】主线程 2 秒钟来保证 JVM 存活
+            runBlocking { //调用runblock的线程会阻塞直到里面的执行完
+                delay(1000L)
+            }
+        }
+
+         fun cc2() = runBlocking{
+            //使用job 等待后台执行
+            val job = GlobalScope.launch {
+                delay(1000L)
+                println("finsh")
+            }
+            println("start")
+            job.join()
+        }
+
+        //上面的简化写法
+        fun cc3() = runBlocking {
+            launch {
+                delay(1000L)
+                println("start")
+            }
+            println("as")
+        }
+
+
+    class Network{
+        inner class Node
+    }
 
 }
