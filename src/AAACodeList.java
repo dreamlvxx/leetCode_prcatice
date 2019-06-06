@@ -17,7 +17,12 @@
  * 背包算法--动态规划解法         {@link JK40Code01}
  * 背包问题 最大总价值            {@link JK40Code02}
  * KMP算法                        {@link KMP}
+ * 两个数字相加                   {@link LeeCode002}
+ * 最长不重复串                   {@link LeeCode003}
+ * 在一个字符串中寻找最大回文串   {@link LeeCode005}
+ * 承装最多水                     {@link LeeCode011}
  * 最大公共前缀子串               {@link LeeCode14}
+ * 一堆数中寻找三个数字和为0      {@link LeeCode015}
  * 删除倒数第几个结点             {@link LeeCode19}
  * 括号匹配                       {@link LeeCode20}
  * 合并两个有序链表               {@link LeeCode21} favorite
@@ -49,6 +54,7 @@
  * N叉树后序遍历                  {@link LeeCode590}
  * 合并两颗二叉树                 {@link LeeCode617}
  * 可以自己除自己每位数           {@link LeeCode728}
+ * Daily Temperatures             {@link LeeCode739} cant favorite 思路 **
  * 翻转对称                       {@link LeeCode832}
  * 数字中最大的（只有一个顶峰）   {@link LeeCode852}
  * 交换一个数组中的数组           {@link LeeCode867}
@@ -56,10 +62,5 @@
  * 重新排序数组                   {@link LeeCode922}
  * 处理数组                       {@link LeeCode929}
  * 按照规则重拍数组               {@link LeeCode942}
- * 两个数字相加                   {@link LeeCode002}
- * 最长不重复串                   {@link LeeCode003}
- * 在一个字符串中寻找最大回文串   {@link LeeCode005}
- * 承装最多水                     {@link LeeCode011}
- * 一堆数中寻找三个数字和为0      {@link LeeCode015}
  */
 public interface AAACodeList {}
