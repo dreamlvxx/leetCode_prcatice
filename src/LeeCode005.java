@@ -18,6 +18,7 @@ public class LeeCode005 {
         return s.substring(lo, lo + maxLen);
     }
 
+    //判断一个字符串是否回文 从中心向两头扩散
     private void extendPalindrome(String s, int j, int k) {
         while (j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)) {
             j--;
