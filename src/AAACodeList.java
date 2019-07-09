@@ -12,6 +12,7 @@
  * 求解一个数的平方根             {@link JK15Code02}
  * 二分查找变形                   {@link JK16Code}
  * 跳表实现                       {@link JK17Code01}
+ * 二叉查找树的操作               {@link JK24Code}
  * 计算一个数组的有序度           {@link JK38Code1}
  * 八皇后问题                     {@link JK39Code1}
  * 背包算法--动态规划解法         {@link JK40Code01}

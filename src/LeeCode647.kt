@@ -16,7 +16,7 @@ class LeeCode647 {
     fun countNumber(s: String,j : Int ,k : Int){
         var jj = j
         var kk = k
-        while(jj >=0 && kk < s.length && s[jj] == s[kk]){
+        while(jj >=0 && kk < s.length && s[jj] == s[kk]){ //以一个几点向两头扩散，相等继续扩散
             number ++
             jj --
             kk++
