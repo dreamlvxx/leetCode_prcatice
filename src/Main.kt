@@ -8,7 +8,7 @@ object Main {
         }
         val mm = MyFirstKotlin()
         mm.lvxingxing
-
+        println("xinzen")
     }
 
 }
