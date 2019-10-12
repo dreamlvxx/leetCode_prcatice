@@ -1,9 +1,9 @@
 @file:JvmName("MyKotlinCompanyObject") //这个可以修改顶级函数生成文件的文件名
-import com.sun.istack.internal.NotNull
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import org.jetbrains.annotations.NotNull
 import kotlin.properties.Delegates
 import JK06Code1 as jj //导包可以自己命名
 
