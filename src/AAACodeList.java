@@ -1,5 +1,7 @@
 /**
  * --------------------------------------------------------------------------------------------
+ * 从尾到头打印一个链表           {@link offer02}
+ * 重新建立一个二叉树             {@link offer04}
  * AC自动机                       {@link ACAutoMechine}
  * 单链表反转                     {@link JK06Code1}
  * 判断链表环的一系列问题         {@link JK06Code02}
@@ -17,6 +19,7 @@
  * 八皇后问题                     {@link JK39Code1}
  * 背包算法--动态规划解法         {@link JK40Code01}
  * 背包问题 最大总价值            {@link JK40Code02}
+ * 拓扑排序                       {@link JK43Code01}
  * KMP算法                        {@link KMP}
  * 两个数字相加                   {@link LeeCode002}
  * 最长不重复串                   {@link LeeCode003}
