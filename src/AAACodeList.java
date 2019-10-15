@@ -4,6 +4,11 @@
  * 重新建立一个二叉树             {@link Offer04}
  * 两个栈实现一个队列             {@link Offer05}
  * 旋转数组的最小数字             {@link Offer06}
+ * 斐波那契数列返回指定值         {@link Offer07}
+ * 上楼梯问题                     {@link Offer08} //同JK10Code01
+ * 变态上楼梯                     {@link Offer09} [贪心]
+ * 矩形覆盖                       {@link Offer10} [递归]
+ * 二进制数中1的个数              {@link Offer11} [二进制]
  * AC自动机                       {@link ACAutoMechine}
  * 单链表反转                     {@link JK06Code1}
  * 判断链表环的一系列问题         {@link JK06Code02}
