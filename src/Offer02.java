@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * 从尾到头打印一个二叉树，
  */
-public class offer02 {
+public class Offer02 {
     public class ListNode {
         int val;
         ListNode next = null;
