@@ -9,6 +9,7 @@
  * 变态上楼梯                     {@link Offer09} [贪心]
  * 矩形覆盖                       {@link Offer10} [递归]
  * 二进制数中1的个数              {@link Offer11} [二进制]
+ * 一个数字的整次方
  * AC自动机                       {@link ACAutoMechine}
  * 单链表反转                     {@link JK06Code1}
  * 判断链表环的一系列问题         {@link JK06Code02}
