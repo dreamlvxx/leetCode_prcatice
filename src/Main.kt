@@ -1,3 +1,6 @@
+import ktcode.MyFirstKotlin
+import leetcode.LeeCode581
+
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
