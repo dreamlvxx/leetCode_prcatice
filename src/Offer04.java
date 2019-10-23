@@ -33,4 +33,27 @@ public class Offer04 {
         return res;
     }
 
+    public TreeNode reConstructBinaryTree1(int [] pre,int [] in) {
+//        if(pre == null || in == null){  这里不写null，是因为会出现空数组造成数组越界的异常
+//            return null;
+//        }
+        if(pre.length == 0 || in.length == 0){
+            return null;
+        }
+        TreeNode res = new TreeNode(pre[0]);
+        int i = getIndex(pre,in);
+        res.left = reConstructBinaryTree1(Arrays.copyOfRange(pre,1,i + 1),Arrays.copyOfRange(in,0,i));
+        res.right = reConstructBinaryTree1(Arrays.copyOfRange(pre,i + 1,pre.length),Arrays.copyOfRange(in,i + 1,in.length));
+        return res;
+    }
+
+    public int getIndex(int[] pre,int[] in){
+        for(int i = 0;i < pre.length;i ++){
+            if(pre[0] == in[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }

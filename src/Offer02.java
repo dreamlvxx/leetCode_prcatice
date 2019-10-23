@@ -14,10 +14,20 @@ public class Offer02 {
     }
 
     //递归实现
-    ArrayList<Integer> res = new ArrayList<>();
+    ArrayList<Integer> arrayList=new ArrayList<Integer>();
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        if (listNode != null) {
-            printListFromTailToHead(listNode);
+        if(listNode!=null){
+            this.printListFromTailToHead(listNode.next);
+            arrayList.add(listNode.val);
+        }
+        return arrayList;
+    }
+
+    //递归的返回值 不同处理
+    public ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
+        ArrayList<Integer> res = new ArrayList();
+        if(listNode != null){
+            res = printListFromTailToHead1(listNode.next);
             res.add(listNode.val);
         }
         return res;

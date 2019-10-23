@@ -9,7 +9,13 @@
  * 变态上楼梯                     {@link Offer09} [贪心]
  * 矩形覆盖                       {@link Offer10} [递归]
  * 二进制数中1的个数              {@link Offer11} [二进制]
- * 一个数字的整次方
+ * 一个数字的整次方               {@link Offer12}
+ * 调整数组中的数字位置           {@link Offer13}
+ * 返回单链表中倒数第K个结点      {@link Offer14} [单链表]
+ * 翻转单恋表                     {@link Offer15} [单链表]
+ * 合并两个有序单链表             {@link Offer16} [单链表]
+ * 树的子结构                     {@link Offer17} [树]
+ * 二叉树的镜像                   {@link Offer18} [树]
  * AC自动机                       {@link ACAutoMechine}
  * 单链表反转                     {@link JK06Code1}
  * 判断链表环的一系列问题         {@link JK06Code02}
