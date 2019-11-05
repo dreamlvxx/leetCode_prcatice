@@ -3,11 +3,11 @@ import leetcode.*;
 import offer.*;
 
 /**
- * --------------------------------------------------------------------------------------------
+ * --------------------https://www.nowcoder.com/practice/----------------------------------------------
  * 从尾到头打印一个链表           {@link Offer02}
  * 重新建立一个二叉树             {@link Offer04}
  * 两个栈实现一个队列             {@link Offer05}
- * 旋转数组的最小数字             {@link Offer06}
+ * 旋转数组的最小数字             {@link Offer06} [数组]
  * 斐波那契数列返回指定值         {@link Offer07}
  * 上楼梯问题                     {@link Offer08} //同JK10Code01
  * 变态上楼梯                     {@link Offer09} [贪心]
@@ -20,6 +20,15 @@ import offer.*;
  * 合并两个有序单链表             {@link Offer16} [单链表]
  * 树的子结构                     {@link Offer17} [树]
  * 二叉树的镜像                   {@link Offer18} [树]
+ * 二叉搜索树的后序遍历序列       {@link VerifySequenceIsBST}[二叉树]
+ * 顺时针打印矩阵                 {@link PrintMatrix} [数组]
+ * 栈的压入、弹出序列             {@link StackPushAndPop} [栈]
+ * 二叉树中和为某一值的路径       {@link FindPathSumTotarget}[二叉树]
+ * 复杂链表的复制                 {@link CopyRandomTree} [链表]
+ * 二叉搜索树与双向链表           {@link ConvertTreeToSequenceTree} [二叉树] [递归]
+ *
+ *
+ * -----------------------------------------极客时间----------------------------------------------------------
  * AC自动机                       {@link ACAutoMechine}
  * 单链表反转                     {@link JK06Code1}
  * 判断链表环的一系列问题         {@link JK06Code02}
@@ -39,6 +48,8 @@ import offer.*;
  * 背包问题 最大总价值            {@link JK40Code02}
  * 拓扑排序                       {@link JK43Code01}
  * KMP算法                        {@link KMP}
+ *
+ * ---------------------------------------------LeeCode----------------------------------------------------------------------
  * 两个数字相加                   {@link LeeCode002}
  * 最长不重复串                   {@link LeeCode003}
  * 在一个字符串中寻找最大回文串   {@link LeeCode005} cant

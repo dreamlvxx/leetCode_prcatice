@@ -7,51 +7,30 @@ package offer;
  * NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
  */
 public class Offer06 {
-    /**
-     * 关键在于是非递减的
-     * 旋转之后的数组实际上可以划分成两个有序的子数组：前面子数组的大小都大于后面子数组中的元素.
-     * 通过mid的变换，
-     * 最终第一个指针将指向前面数组的最后一个元素，第二个指针指向后面数组中的第一个元素。
-     * 也就是说他们将指向两个相邻的元素，而第二个指针指向的刚好是最小的元素，这就是循环的结束条件。
-     * @param nums
-     * @return
-     */
+
     public int minNumberInRotateArray(int[] nums) {
-        int size = nums.length;
-        if (size == 0){
-            return 0;
+        if (nums.length == 1) {
+            return nums[0];
         }
-        int left = 0,right = size - 1;
-        int mid = 0;
-        while (nums[left] > nums[right]){//如果旋转了，那么第一个肯定大于最后一个
-            if (right - left == 1){//终结条件，两个指针相邻，第二个就是最小的。
-                mid = right;
-                break;
+        int l = 0;
+        int r = nums.length - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (nums[l] < nums[r]) {
+                return nums[l];
             }
-            mid = left + (right - left)/2;
-            //这个是处理特殊情况，遇到10111这种的时候，left mid right指向的值都相同。那么就寻找最小的返回即可。
-            if(nums[left] == nums[right] && nums[left] == nums[mid]){
-                return minNum(nums,left,right);
+            if (nums[mid] > nums[mid + 1]) {
+                return nums[mid + 1];
             }
-
-            //这个通过判断mid与left right值对比，移动指针。
-            if (nums[mid] > nums[left]){
-                right = mid;
-            }else{
-                left = mid;
+            if (nums[mid] < nums[mid - 1]) {
+                return nums[mid];
             }
-
-        }
-        return nums[mid];
-    }
-    
-    private int minNum(int[] nums,int l,int r){
-        int res = nums[0];
-        for (int i = l + 1; i < r; i++) {
-            if (nums[i] < res){
-                res = nums[i];
+            if (nums[mid] > nums[0]) {
+                l = mid + 1;
+            } else {
+                r = mid - 1;
             }
         }
-        return res;
+        return 0;
     }
 }
