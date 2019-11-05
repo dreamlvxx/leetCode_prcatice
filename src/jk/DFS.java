@@ -14,6 +14,7 @@ public class DFS {
     }
 
     public void dfs(TreeNode root){
+
         if(null == root)return;
         Stack<TreeNode> stack = new Stack<>();
         stack.add(root);
