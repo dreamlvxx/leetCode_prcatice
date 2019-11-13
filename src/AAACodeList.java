@@ -26,6 +26,11 @@ import offer.*;
  * 二叉树中和为某一值的路径       {@link FindPathSumTotarget}[二叉树]
  * 复杂链表的复制                 {@link CopyRandomTree} [链表]
  * 二叉搜索树与双向链表           {@link ConvertTreeToSequenceTree} [二叉树] [递归]
+ * 数组中出现次数超过一半的数字   {@link Vote} [数组]
+ * 最小的K个数                    {@link MinusK} [数组]
+ * 整数中1出现的次数（从1到n整数中1出现的次数）  {@link OnceShow} 未完成。。。
+ * 把数组排成最小的数                {@link AddToMin}  未完成
+ * 第一个只出现一次的字符              {@link FirstOnceNumber}
  *
  *
  * -----------------------------------------极客时间----------------------------------------------------------
@@ -43,7 +48,7 @@ import offer.*;
  * 跳表实现                       {@link JK17Code01}
  * 二叉查找树的操作               {@link JK24Code}
  * 计算一个数组的有序度           {@link JK38Code1}
- * 八皇后问题                     {@link JK39Code1}
+ * 八皇后问题                     {@link JK39Code1} [回溯]
  * 背包算法--动态规划解法         {@link JK40Code01}
  * 背包问题 最大总价值            {@link JK40Code02}
  * 拓扑排序                       {@link JK43Code01}
@@ -98,3 +103,5 @@ import offer.*;
  * 按照规则重拍数组               {@link LeeCode942}
  */
 public interface AAACodeList {}
+
+

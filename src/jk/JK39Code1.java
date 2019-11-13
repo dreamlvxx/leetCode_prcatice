@@ -17,7 +17,6 @@ public class JK39Code1 {
                 cal8queens(row + 1);
             }
         }
-
     }
 
     private boolean isOk(int row,int column){

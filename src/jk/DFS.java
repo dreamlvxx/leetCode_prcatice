@@ -13,6 +13,7 @@ public class DFS {
         }
     }
 
+    //遍历解决
     public void dfs(TreeNode root){
 
         if(null == root)return;
