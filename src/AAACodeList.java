@@ -102,6 +102,9 @@ import offer.*;
  * 重新排序数组                   {@link LeeCode922}
  * 处理数组                       {@link LeeCode929}
  * 按照规则重拍数组               {@link LeeCode942}
+ * Generate Parentheses         {@link LeeCode22} [递归,回溯]
+ * Product of Array Except Self  {@link LeeCode227} [数学规律]
+ * Subsets                      {@link LeeCode78} {递归，回溯}
  */
 public interface AAACodeList {}
 
