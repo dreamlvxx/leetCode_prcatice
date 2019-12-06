@@ -98,13 +98,15 @@ import offer.*;
  * 翻转对称                       {@link LeeCode832}
  * 数字中最大的（只有一个顶峰）   {@link LeeCode852}
  * 交换一个数组中的数组           {@link LeeCode867}
- * 找到链表中点                   {@link LeeCode876}
+ * Leaf-Similar Trees            {@link LeeCode872}
+ * 找到链表中点                   {@link LeeCode876} dfs
  * 重新排序数组                   {@link LeeCode922}
  * 处理数组                       {@link LeeCode929}
  * 按照规则重拍数组               {@link LeeCode942}
  * Generate Parentheses         {@link LeeCode22} [递归,回溯]
  * Product of Array Except Self  {@link LeeCode227} [数学规律]
  * Subsets                      {@link LeeCode78} {递归，回溯}
+ * Maximum Depth of N-ary Tree
  */
 public interface AAACodeList {}
 
