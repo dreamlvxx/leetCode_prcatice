@@ -67,7 +67,8 @@ import offer.*;
  * 合并两个有序链表               {@link LeeCode21} favorite
  * 连续串最大和                   {@link LeeCode53} cant
  * 爬楼梯问题                     {@link LeeCode70}
- * 是否为对称二叉树               {@link LeeCode101} cant difficult  {@link BFS} import
+ *  Same Tree                   {@link LeeCode100} dfs
+ * 是否为对称二叉树               {@link LeeCode101} dfs favorite
  * Convert Sorted Array to Binary Search Tree  @{@link LeeCode108} dfs
  * 买卖的最佳时机                 {@link LeeCode121} good
  * 蓄水池最大容量                 {@link MaxWater}
@@ -78,6 +79,7 @@ import offer.*;
  * 翻转一个链表                   {@link LeeCode206} favorite
  * 翻转一个二叉树                 {@link LeeCode226}
  * 判断一个链表是否回文           {@link LeeCode234} favorite cant {@link LeeCode206}
+ * Binary Tree Paths            {@link LeeCode257} dfs
  * 将数组中的0移到末尾            {@link LeeCode283}
  * Counting Bits                  {@link LeeCode338} favorite 运算符的巧用
  * 路径和等于给定数字             {@link LeeCode437} favorite  difficult 里面有一种类似计数排序原理的解法，比较难理解。记。{@link LeeCode560}关联。
