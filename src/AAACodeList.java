@@ -70,6 +70,7 @@ import offer.*;
  *  Same Tree                   {@link LeeCode100} dfs
  * 是否为对称二叉树               {@link LeeCode101} dfs favorite
  * Convert Sorted Array to Binary Search Tree  @{@link LeeCode108} dfs
+ * Flatten Binary Tree to Linked List {@link LeeCode114} dfs favorite
  * 买卖的最佳时机                 {@link LeeCode121} good
  * 蓄水池最大容量                 {@link MaxWater}
  * 找出单独的一个                 {@link LeeCode136} favorite
@@ -111,6 +112,9 @@ import offer.*;
  * Subsets                      {@link LeeCode78} {递归，回溯}
  * Maximum Depth of N-ary Tree
  */
-public interface AAACodeList {}
+public interface AAACodeList {
+
+
+}
 
 
