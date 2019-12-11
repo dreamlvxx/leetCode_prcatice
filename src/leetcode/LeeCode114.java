@@ -15,15 +15,19 @@ public class LeeCode114 {
         }
     }
 
-    private TreeNode prev = null;
+    private TreeNode next = null;
 
+    /**
+     * 利用从后往前构建
+     * @param root
+     */
     public void flatten(TreeNode root) {
         if (root == null)
             return;
         flatten(root.right);
         flatten(root.left);
-        root.right = prev;
+        root.right = next;
         root.left = null;
-        prev = root;
+        next = root;
     }
 }
