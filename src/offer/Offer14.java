@@ -13,6 +13,13 @@ public class Offer14 {
             this.val = val;
         }
     }
+
+    /**
+     * 快慢指针
+     * @param head
+     * @param k
+     * @return
+     */
     public ListNode FindKthToTail(ListNode head,int k) {
         if(head == null){
             return null;

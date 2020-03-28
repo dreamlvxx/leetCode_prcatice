@@ -1,8 +1,6 @@
 package offer;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 public class Offer18 {
@@ -18,21 +16,41 @@ public class Offer18 {
         }
 
     }
+
+    // 递归
+    public void Mirror1(TreeNode root){
+        if (root == null)return;
+        //reverse
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+        //递归
+        Mirror1(root.left);
+        Mirror1(root.right);
+    }
+
+
     //非递归   利用层次遍历原理  借助queue
     public void Mirror(TreeNode root) {
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){
+            //get
             TreeNode node = queue.remove();
-            TreeNode temp = root.left;
-            root.right = root.left;
-            root.left = temp;
+
+            //reverse
+            TreeNode temp = node.left;
+            node.right = node.left;
+            node.left = temp;
+
+            //put
             if(node.left != null){
                 queue.add(node.left);
             }
             if(node.right != null){
                 queue.add(node.right);
             }
+
         }
     }
 
@@ -56,13 +74,5 @@ public class Offer18 {
         }
     }
 
-    // 递归
-    public void Mirror1(TreeNode root){
-        if (root == null)return;
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
-        Mirror1(root.left);
-        Mirror1(root.right);
-    }
+
 }

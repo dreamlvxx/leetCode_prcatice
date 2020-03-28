@@ -1,7 +1,12 @@
 package offer;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+
+/**
+ * 题目描述：
+ * 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。
+ * 如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。
+ */
 
 public class VerifySequenceIsBST {
     public boolean VerifySquenceOfBST(int [] sequence) {
@@ -12,6 +17,9 @@ public class VerifySequenceIsBST {
     }
 
     /**
+     * 分析：
+     * 关键词【二叉搜索树】
+     * root节点的值大于左子树的任意节点，小于右子树的任意节点
      * 验证主要是对于一个数组A序列，
      * 如果是后续遍历，
      * 那么满足最后一个结点为root，剩下的B序列就是左子树和右子树构成的

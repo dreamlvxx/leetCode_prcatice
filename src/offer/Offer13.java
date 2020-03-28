@@ -10,6 +10,11 @@ public class Offer13 {
         int[] arr = {1,2,3,4,5,6,7};
         reOrderArray(arr);
     }
+
+    /**
+     * 类似于快速排序的分点函数
+     * @param array
+     */
     public static void reOrderArray(int [] array) {
         int cur = 0;
         for (int i = 0; i < array.length; i++) {

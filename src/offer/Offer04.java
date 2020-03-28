@@ -19,43 +19,28 @@ public class Offer04 {
         }
     }
 
+    /**
+     * 要理解   前序遍历的结构是【root，左，右】   中序遍历的结构是【左，root，右】
+     * 然后依据拆分即可重构
+     *
+     * @param pre
+     * @param in
+     * @return
+     */
     public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
-        if (pre.length == 0 || in.length == 0){
+        if (pre.length == 0 || in.length == 0) {
             return null;
         }
-        TreeNode res = new TreeNode(pre[0]);
+        TreeNode res = new TreeNode(pre[0]);//root的节点就是pre的第一个元素
         for (int i = 0; i < pre.length; i++) {//这个for，是在in中寻找等于pre[0]的值，然后进行分割。
-            if (in[i] == pre[0]){
+            if (in[i] == pre[0]) {
                 //以下通过这找到的值，可以将前序，中序中分割出来左子树的前序中序和右子树的前序中序。
-                res.left = reConstructBinaryTree(Arrays.copyOfRange(pre,1,i + 1),Arrays.copyOfRange(in,0,i));
-                res.right = reConstructBinaryTree(Arrays.copyOfRange(pre,i + 1,pre.length),Arrays.copyOfRange(in,i + 1,in.length));
+                res.left = reConstructBinaryTree(Arrays.copyOfRange(pre, 1, i + 1), Arrays.copyOfRange(in, 0, i));
+                res.right = reConstructBinaryTree(Arrays.copyOfRange(pre, i + 1, pre.length), Arrays.copyOfRange(in, i + 1, in.length));
                 break;
             }
         }
         return res;
-    }
-
-    public TreeNode reConstructBinaryTree1(int [] pre,int [] in) {
-//        if(pre == null || in == null){  这里不写null，是因为会出现空数组造成数组越界的异常
-//            return null;
-//        }
-        if(pre.length == 0 || in.length == 0){
-            return null;
-        }
-        TreeNode res = new TreeNode(pre[0]);
-        int i = getIndex(pre,in);
-        res.left = reConstructBinaryTree1(Arrays.copyOfRange(pre,1,i + 1),Arrays.copyOfRange(in,0,i));
-        res.right = reConstructBinaryTree1(Arrays.copyOfRange(pre,i + 1,pre.length),Arrays.copyOfRange(in,i + 1,in.length));
-        return res;
-    }
-
-    public int getIndex(int[] pre,int[] in){
-        for(int i = 0;i < pre.length;i ++){
-            if(pre[0] == in[i]){
-                return i;
-            }
-        }
-        return -1;
     }
 
 }

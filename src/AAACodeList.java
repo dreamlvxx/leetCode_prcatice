@@ -3,24 +3,24 @@ import leetcode.*;
 import offer.*;
 
 /**
- * --------------------https://www.nowcoder.com/practice/----------------------------------------------
+ * --------------------https://www.nowcoder.com/ta/coding-interviews----------------------------------------------
+ * 【重新建立一个二叉树】             {@link Offer04}
+ * 【旋转数组的最小数字】             {@link Offer06} [数组]
+ * 【上楼梯问题】                     {@link Offer08} //同JK10Code01
+ * 【变态上楼梯】                     {@link Offer09} [贪心]
+ * 【矩形覆盖】                       {@link Offer10} [递归]
+ * 【调整数组中的数字位置】           {@link Offer13}
+ * 【返回单链表中倒数第K个结点】      {@link Offer14} [单链表]
+ * 【合并两个有序单链表】             {@link Offer16} [单链表]
+ * 【树的子结构】                     {@link Offer17} [树]
+ * 【二叉树的镜像】                   {@link Offer18} [树]
+ * 【二叉搜索树的后序遍历序列】       {@link VerifySequenceIsBST}[二叉树]
  * 从尾到头打印一个链表           {@link Offer02}
- * 重新建立一个二叉树             {@link Offer04}
  * 两个栈实现一个队列             {@link Offer05}
- * 旋转数组的最小数字             {@link Offer06} [数组]
  * 斐波那契数列返回指定值         {@link Offer07}
- * 上楼梯问题                     {@link Offer08} //同JK10Code01
- * 变态上楼梯                     {@link Offer09} [贪心]
- * 矩形覆盖                       {@link Offer10} [递归]
  * 二进制数中1的个数              {@link Offer11} [二进制]
  * 一个数字的整次方               {@link Offer12}
- * 调整数组中的数字位置           {@link Offer13}
- * 返回单链表中倒数第K个结点      {@link Offer14} [单链表]
- * 翻转单恋表                     {@link Offer15} [单链表]
- * 合并两个有序单链表             {@link Offer16} [单链表]
- * 树的子结构                     {@link Offer17} [树]
- * 二叉树的镜像                   {@link Offer18} [树]
- * 二叉搜索树的后序遍历序列       {@link VerifySequenceIsBST}[二叉树]
+ * 翻转单链表                     {@link Offer15} [单链表]
  * 顺时针打印矩阵                 {@link PrintMatrix} [数组]
  * 栈的压入、弹出序列             {@link StackPushAndPop} [栈]
  * 二叉树中和为某一值的路径       {@link FindPathSumTotarget}[二叉树]
