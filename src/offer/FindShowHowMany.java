@@ -1,5 +1,9 @@
 package offer;
 
+
+/**
+ * 统计一个数字在【排序】【数组】中出现的次数。
+ */
 public class FindShowHowMany {
     public int GetNumberOfK(int [] array , int k) {
         return binarySearch(array,k + 0.5) - binarySearch(array,k - 0.5);

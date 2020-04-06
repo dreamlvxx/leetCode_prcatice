@@ -1,29 +1,29 @@
 package leetcode;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class LeeCode003 {
-    //mine
+
+
+    /**
+     *
+     * @param s
+     * @return
+     */
     public int lengthOfLongestSubstring(String s) {
+        if (null == s || s.length() == 0) {
+            return 0;
+        }
         int max = 0;
-        char[] arr = s.toCharArray();
-        ArrayList<Character> temp = new ArrayList<>();//这里可以用HashSet优化，使用contain()做到O(1)的复杂度
-        for (int i = 0; i < arr.length;) {
-            temp.clear();
-            for (int j = i; j < arr.length; j++) {
-                if (temp.indexOf(arr[j]) == -1){
-                    temp.add(arr[j]);//如果临时字符串中不包含，就加入
-                }else{
-                    i = i + temp.indexOf(arr[j]) + 1;//更新从哪个字符开始寻找最大长度字符串  更新为匹配已有的字符串的相同字符的下标的后一个开始
-                    break;
-                }
-                if (temp.size() > max){//看当前的字符串是否超过
-                    max = temp.size();
-                }
-                if (j == arr.length - 1){//当一直添加直到结尾的时候，就直接return
-                    return max;
-                }
+        int j = 0; //不重复的最左边界
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                //这里用Math.max保证j不会回退，比如"abbacvb"，当b重复，那么j会更新到2，当a重复，可能造成回退到0，所以要加max
+                j = Math.max(j, map.get(s.charAt(i)) + 1);
             }
+            map.put(s.charAt(i), i);
+            max = Math.max(max, i - j + 1);
         }
         return max;
     }

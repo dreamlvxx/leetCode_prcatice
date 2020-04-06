@@ -9,7 +9,6 @@ public class LeeCode002 {
         }
     }
 
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null)return null;
         ListNode st = new ListNode(0);
@@ -20,10 +19,13 @@ public class LeeCode002 {
             //对于两个链表长度不一致，短的那个相当于用0补充
             int x = (l1 != null)? l1.val : 0;
             int y = (l2 != null)? l2.val : 0;
+
             int sum = bring + x + y;
             bring = sum / 10;
+
             newListNode.next = new ListNode(sum % 10);
             newListNode = newListNode.next;
+
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }

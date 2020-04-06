@@ -29,7 +29,7 @@ public class JK06Code02 {
         while (runner.next != null && runner.next.next != null) {
             walker = walker.next;
             runner = runner.next.next;
-            if (walker == runner) {
+            if (walker == runner) {//有环的话，终究会相遇
                 return true;
             }
         }
@@ -84,12 +84,15 @@ public class JK06Code02 {
             walker = walker.next;
             runner = runner.next.next;
             if (walker == runner) {
+                //=================================================
                 runner = head;
                 while (runner != walker){
                     walker = walker.next;
                     runner = runner.next;
                 }
                 return runner;
+                //=================================================
+
             }
         }
         return null;
@@ -97,8 +100,7 @@ public class JK06Code02 {
 
     /**
      * 判断环中的节点个数
-     * 还是先用快慢指针找到相遇点，
-     * 相遇后，继续跑慢指针并且开始计数，当慢指针回到相遇点的时候，就是节点的个数
+     * 再跑一圈就行了
      * @param head
      * @return
      */

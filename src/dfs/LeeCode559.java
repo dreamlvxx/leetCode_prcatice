@@ -1,6 +1,5 @@
-package leetcode;
+package dfs;
 
-import java.util.Collections;
 import java.util.List;
 
 public class LeeCode559 {
@@ -10,28 +9,26 @@ public class LeeCode559 {
 
         public Node() {}
 
+        public Node(int _val) {
+            val = _val;
+        }
+
         public Node(int _val, List<Node> _children) {
             val = _val;
             children = _children;
         }
-    };
+    }
 
     public int maxDepth(Node root) {
-        if(root == null){
+        if (root == null){
             return 0;
         }
-        int max = 0;
-
-        for(int i = 0; i < root.children.size(); ++ i){
-            Node d =  root.children.get(i);
-            if(d != null){
-                int m = maxDepth(d);
-                if(m > max){
-                    max = m;
-                }
+        int res = 0;
+        if (root.children != null){
+            for (int i = 0;i < root.children.size(); i ++){
+                res = Math.max(res,maxDepth(root.children.get(i)));
             }
         }
-        return max + 1;
-
+        return res + 1;
     }
 }

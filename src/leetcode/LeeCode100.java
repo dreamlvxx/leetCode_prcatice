@@ -21,8 +21,11 @@ public class LeeCode100 {
         }
         boolean res = false;
         if (p != null && q != null) {
-            if (p.val == q.val) {
-                res = isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+            //满足三个条件，root val相等，左子树相同，右子树相同
+            if (p.val == q.val
+                    && isSameTree(p.left, q.left)
+                    && isSameTree(p.right, q.right)) {
+                res = true;
             }
         }
         return res;

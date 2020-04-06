@@ -1,8 +1,14 @@
 package offer;
 
 import java.util.ArrayList;
-import java.util.Random;
 
+
+/**
+ * 题目描述：
+ * 输入一个复杂链表（每个节点中有节点值，以及两个指针，一个指向下一个节点，另一个特殊指针指向任意一个节点），
+ * 返回结果为复制后复杂链表的head。
+ * （注意，输出结果中请不要返回参数中的节点引用，否则判题程序会直接返回空）
+ */
 public class CopyRandomTree {
     public class RandomListNode {
         int label;
@@ -19,7 +25,7 @@ public class CopyRandomTree {
             return null;
         }
         RandomListNode cur = pHead;
-        //先进行复制相邻结点
+        //复制新的next节点
         while (cur != null) {
             RandomListNode newNode = new RandomListNode(cur.label);
             RandomListNode nextNode = cur.next;
@@ -27,7 +33,7 @@ public class CopyRandomTree {
             newNode.next = nextNode;
             cur = nextNode;
         }
-        //再根据原来的结点，构造新结点的random
+        //复制新的random节点
         RandomListNode curr = pHead;
         while (curr != null) {
             RandomListNode nNode = curr.next;
@@ -35,12 +41,14 @@ public class CopyRandomTree {
             nNode.random = randomOld.next;
             curr = curr.next.next;
         }
+
+
         //将原来的链表和新构造的链表继续拆分
         RandomListNode res = pHead.next;
         RandomListNode cur1 = res;
         pHead = pHead.next.next;
         while (pHead != null) {
-            cur1.next =  pHead;
+            cur1.next = pHead;
             cur1 = cur1.next;
             pHead = pHead.next.next;
         }

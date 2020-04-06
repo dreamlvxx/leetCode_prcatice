@@ -6,15 +6,13 @@ import java.util.Stack;
 public class Offer18 {
 
     public class TreeNode {
-        int val = 0;
+        int val;
         TreeNode left = null;
         TreeNode right = null;
 
         public TreeNode(int val) {
             this.val = val;
-
         }
-
     }
 
     // 递归

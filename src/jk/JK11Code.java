@@ -65,6 +65,7 @@ public class JK11Code {
             int value = arr[i];//暂时保存i这个位置的值，后面给空位补上
             int j = i - 1;
             for (; j >=0 ; --j) {
+
                 if (arr[j] > value){//这里用移动，所以从i之前的第一个开始，如果大于i对应的值，那么就往后移动
                     arr[j + 1] = arr[j];
                 }else{
@@ -166,34 +167,41 @@ public class JK11Code {
         return result;
     }
 
+
+    public static void main(String[] args) {
+        int[] arr = {10,1,9,1,4,3,7,8,5,6,4,7,2,4,5,};
+        quickSort(arr,0,arr.length - 1);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "-");
+        }
+    }
     /**
      * 快速排序
      * 原地排序
      * 不是稳定的排序
      */
-    public void quickSort(int[] arr,int start,int end){
+    public static void quickSort(int[] arr,int start,int end){
         if (start >= end)return;
         int p = partition(arr,start,end);
-        quickSort(arr,start,p);
+        quickSort(arr,start,p - 1);
         quickSort(arr,p + 1,end);
     }
-
-    private int partition(int arr[],int start,int end){
+    private static int partition(int[]arr,int start,int end){
         int pivot = arr[end];
         int areaIndex = start;
-        for (int i = start; i < end - 1; i++) {
-             if (arr[i] < pivot){
-                 swap(arr,areaIndex,i);
-                 areaIndex ++;
-             }
+        for (int i = start; i <= end - 1; i++) {
+            if (arr[i] < pivot){
+                swap(arr,areaIndex,i);
+                ++ areaIndex;
+            }
         }
-        swap(arr,areaIndex,pivot);
+        swap(arr,areaIndex,end);
         return areaIndex;
     }
 
-    private void swap(int[] arr,int i, int j){
-        arr[i] = arr[j] + arr[i];
-        arr[j] = arr[i] - arr[j];
-        arr[i] = arr[i] - arr[j];
+    private static void swap(int[] arr,int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
