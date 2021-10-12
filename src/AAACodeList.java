@@ -2,6 +2,7 @@ import jk.*;
 import leetcode.*;
 import offer.*;
 import dfs.*;
+import leetcode_cn.*;
 
 /**
  * --------------------https://www.nowcoder.com/ta/coding-interviews----------------------------------------------
@@ -128,6 +129,7 @@ import dfs.*;
  * 【爬楼梯问题】                     {@link LeeCode70}
  * 【连续串最大和】                   {@link LeeCode53}
  * 【隔间偷】                         {@link LeeCode198}
+ * 【杨辉三角】                       {@link LeetCode118}
  *
  *
  * ==================================================
