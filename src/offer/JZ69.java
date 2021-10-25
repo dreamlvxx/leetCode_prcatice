@@ -1,6 +1,6 @@
 package offer;
 
-public class Offer08 {
+public class JZ69 {
     //循环实现
     public int JumpFloor(int target) {
         if (target == 1){

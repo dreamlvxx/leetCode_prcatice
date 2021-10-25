@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+
 /**
  */
 public class LeeCode198 {

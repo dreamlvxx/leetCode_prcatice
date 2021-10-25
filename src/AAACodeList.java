@@ -7,14 +7,14 @@ import dp_study_project.*;
 
 /**
  * --------------------https://www.nowcoder.com/ta/coding-interviews----------------------------------------------
- * 【重新建立一个二叉树】             {@link Offer04}
- * 【旋转数组的最小数字】             {@link Offer06} [数组]
- * 【上楼梯问题】                     {@link Offer08} //同JK10Code01
- * 【变态上楼梯】                     {@link Offer09} [贪心]
- * 【矩形覆盖】                       {@link Offer10} [递归]
- * 【调整数组中的数字位置】           {@link Offer13}
- * 【返回单链表中倒数第K个结点】      {@link Offer14} [单链表]
- * 【合并两个有序单链表】             {@link Offer16} [单链表]
+ * 【重新建立一个二叉树】+             {@link JZ7}
+ * 【旋转数组的最小数字】+             {@link JZ11} [数组]
+ * 【上楼梯问题】+                     {@link JZ69}
+ * 【变态上楼梯】+                     {@link JZ71}
+ * 【矩形覆盖】+                       {@link JZ70} [递归]
+ * 【调整数组中的数字位置】+           {@link JZ21}
+ * 【返回单链表中倒数第K个结点】+      {@link JZ54} [单链表]
+ * 【合并两个有序单链表】             {@link JZ25} [单链表]
  * 【树的子结构】                     {@link Offer17} [树]
  * 【二叉树的镜像】                   {@link Offer18} [树]
  * 【二叉搜索树的后序遍历序列】       {@link VerifySequenceIsBST}[二叉树]
@@ -135,14 +135,24 @@ import dp_study_project.*;
  *
  *
  * ==================================================
- * 【无序数组中位数】              {@link MediumNumber} 快排
+ * 【无序数组中位数】              {@link MediumNumber} 快排思想 + 二分查找
  *
  * ==================================================DP学习计划======================================
+ * day1
  * 【斐波那契数】                  {@link LeetCode_cn_509}
  * 【第 N 个泰波那契数】             {@link LeetCode_cn_1137}
+ * day2
  * 【爬楼梯】                    {@link LeetCode_cn_70}
- * 【使用最小花费爬楼梯】          {@link LeetCode_cn_746}
- *
+ * 【使用最小花费爬楼梯】*          {@link LeetCode_cn_746}
+ * day3
+ * 【打家劫舍】                  {@link LeetCode_cn_198}
+ * 【打家劫舍 II】                {@link LeetCode_cn_213}
+ * 【删除并获得点数】*                {@link LeetCode_cn_740}
+ * day4
+ * 【跳跃游戏】                   {@link LeetCode_cn_55}
+ * 【跳跃游戏 II】                {@link LeetCode_cn_45}
+ * day5
+ * 【最大子序和】                  {@link LeetCode_cn_53}
  *
  */
 public interface AAACodeList {

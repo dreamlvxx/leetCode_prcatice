@@ -3,7 +3,7 @@ package offer;
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  */
-public class Offer14 {
+public class JZ54 {
 
     public class ListNode {
         int val;
@@ -38,6 +38,27 @@ public class Offer14 {
         }
 
         while(fast.next != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    //===============
+    public ListNode findlas(ListNode head,int k){
+        if (head == null){
+            return null;
+        }
+        ListNode fast = head;
+        ListNode slow = head;
+        while (k > 1){
+            fast = fast.next;
+            if (fast == null){
+                return null;
+            }
+            k--;
+        }
+        while (fast.next != null){
             fast = fast.next;
             slow = slow.next;
         }

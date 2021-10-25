@@ -6,10 +6,11 @@ package offer;
  * 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
  * NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
  */
-public class Offer06 {
+public class JZ11 {
 
     /**
      * 一般针对【数组】的题目，而且一定基础上【有序】，那么可以考虑【二分的变体】
+     *
      * @param nums
      * @return
      */
@@ -44,4 +45,37 @@ public class Offer06 {
         }
         return 0;
     }
+
+
+    public int findMin(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return 0;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        //{3,4,5,1,2}为{1,2,3,4,5}
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[left] < nums[right]) {
+                return nums[left];
+            }
+
+            if (nums[mid] > nums[mid] + 1) {
+                return nums[mid + 1];
+            }
+
+            if (nums[mid] < nums[mid - 1]) {
+                return nums[mid];
+            }
+
+            if (nums[mid] > nums[0]) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+
+        }
+        return 0;
+    }
+
 }

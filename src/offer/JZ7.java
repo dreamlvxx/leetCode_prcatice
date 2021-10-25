@@ -1,5 +1,7 @@
 package offer;
 
+import sun.reflect.generics.tree.Tree;
+
 import java.util.Arrays;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Arrays;
  * 例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，
  * 则重建二叉树并返回。
  */
-public class Offer04 {
+public class JZ7 {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -41,6 +43,26 @@ public class Offer04 {
             }
         }
         return res;
+    }
+
+
+
+    //================
+    public TreeNode rebuild(int[] pre,int[] in){
+        TreeNode root = new TreeNode(pre[0]);
+        int index = findIndexOfRoot(in,pre[0]);
+        root.left = rebuild(Arrays.copyOfRange(pre,0,index + 1),Arrays.copyOfRange(in,0,index));
+        root.right = rebuild(Arrays.copyOfRange(pre,index,pre.length),Arrays.copyOfRange(in,index + 1,in.length));
+        return root;
+    }
+
+    public int findIndexOfRoot(int[] in,int target){
+        for (int i = 0; i < in.length; i++) {
+            if (in[i] == target){
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
