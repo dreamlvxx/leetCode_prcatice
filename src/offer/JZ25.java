@@ -31,4 +31,28 @@ public class JZ25 {
             return list1;
         }
     }
+
+    public ListNode Merge1(ListNode list1,ListNode list2){
+        ListNode res = new ListNode(0);
+        res.next = null;
+        ListNode root = res;
+        while (list1 != null && list2 != null){
+            if (list1.val > list2.val){
+                res.next = list2;
+                res = list2;
+                list2 = list2.next;
+            }else{
+                res.next = list1;
+                res = list1;
+                list1 = list1.next;
+            }
+        }
+        if (list1 != null){
+            res.next = list1;
+        }
+        if (list2 != null){
+            res.next = list2;
+        }
+        return root.next;
+    }
 }

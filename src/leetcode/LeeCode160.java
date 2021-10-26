@@ -17,6 +17,13 @@ public class LeeCode160 {
         }
     }
 
+    /**
+     * 原理很简单，
+     * 关键在于两个链表不对齐，所以简单的办法就是2个探针进行遍历，探针A和探针B将两个长短不一致的链表都走一遍，最后探针A和B就会相遇了
+     * @param headA
+     * @param headB
+     * @return
+     */
     // perfect coding
     public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
         //boundary check
@@ -33,5 +40,32 @@ public class LeeCode160 {
         }
         return a;
     }
+
+    public int getMaxLen(int[] nums) {
+        int length = nums.length;
+        int[] positive = new int[length];
+        int[] negative = new int[length];
+        if (nums[0] > 0) {
+            positive[0] = 1;
+        } else if (nums[0] < 0) {
+            negative[0] = 1;
+        }
+        int maxLength = positive[0];
+        for (int i = 1; i < length; i++) {
+            if (nums[i] > 0) {
+                positive[i] = positive[i - 1] + 1;
+                negative[i] = negative[i - 1] > 0 ? negative[i - 1] + 1 : 0;
+            } else if (nums[i] < 0) {
+                positive[i] = negative[i - 1] > 0 ? negative[i - 1] + 1 : 0;
+                negative[i] = positive[i - 1] + 1;
+            } else {
+                positive[i] = 0;
+                negative[i] = 0;
+            }
+            maxLength = Math.max(maxLength, positive[i]);
+        }
+        return maxLength;
+    }
+
 
 }

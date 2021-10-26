@@ -14,8 +14,8 @@ import dp_study_project.*;
  * 【矩形覆盖】+                       {@link JZ70} [递归]
  * 【调整数组中的数字位置】+           {@link JZ21}
  * 【返回单链表中倒数第K个结点】+      {@link JZ54} [单链表]
- * 【合并两个有序单链表】             {@link JZ25} [单链表]
- * 【树的子结构】                     {@link Offer17} [树]
+ * 【合并两个有序单链表】+             {@link JZ25} [单链表]
+ * 【树的子结构】                     {@link JZ26} [树]
  * 【二叉树的镜像】                   {@link Offer18} [树]
  * 【二叉搜索树的后序遍历序列】       {@link VerifySequenceIsBST}[二叉树]
  * 【栈的压入、弹出序列】             {@link StackPushAndPop} [栈]
@@ -59,7 +59,7 @@ import dp_study_project.*;
  * KMP算法                        {@link KMP}
  *
  * ---------------------------------------------LeeCode----------------------------------------------------------------------
- * 【两个链表交汇结点】               {@link LeeCode160} favorite amazing
+ * 【两个链表交汇结点】*               {@link LeeCode160} favorite amazing
  * 【树的非递归遍历】                {@link TreeNodeTravelByIterator}
  * 【最小乱序区域】                   {@link LeeCode581} favorite 最优解法 O(n)
  * 【最长不重复串】                   {@link LeeCode003} dp问题 双指针
@@ -153,6 +153,10 @@ import dp_study_project.*;
  * 【跳跃游戏 II】                {@link LeetCode_cn_45}
  * day5
  * 【最大子序和】                  {@link LeetCode_cn_53}
+ *【环形子数组的最大和】           {@link LeetCode_cn_918}
+ * day6
+ * 【乘积最大子数组】                {@link LeetCode_cn_152}
+ *【乘积为正数的最长子数组长度】     {@link LeetCode_cn_1567}
  *
  */
 public interface AAACodeList {
