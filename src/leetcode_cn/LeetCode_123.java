@@ -11,6 +11,11 @@ package leetcode_cn;
 
 public class LeetCode_123 {
 
+    /**
+     * dp定义为，第i天，已做了几笔交易(一笔交易指的是买了，卖了)，目前持有还是不持有
+     * @param prices
+     * @return
+     */
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length <= 1) {
             return 0;
