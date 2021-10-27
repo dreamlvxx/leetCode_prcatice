@@ -157,6 +157,9 @@ import dp_study_project.*;
  * day6
  * 【乘积最大子数组】                {@link LeetCode_cn_152}
  *【乘积为正数的最长子数组长度】     {@link LeetCode_cn_1567}
+ * day7
+ * 【买卖的最佳时机】               {@link LeeCode121}
+ *【买卖股票的最佳时机 II】
  *
  */
 public interface AAACodeList {
