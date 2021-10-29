@@ -11,7 +11,9 @@ package leetcode_cn;
 
 public class LeetCode_123 {
 
+
     /**
+     * lXl@4@1&6
      * dp定义为，第i天，已做了几笔交易(一笔交易指的是买了，卖了)，目前持有还是不持有
      * @param prices
      * @return
@@ -21,6 +23,7 @@ public class LeetCode_123 {
             return 0;
         }
         int n = prices.length;
+        //因为最小值再减去1就是最大值Integer.MIN_VALUE-1=Integer.MAX_VALUE
         int MIN_VALUE = Integer.MIN_VALUE / 2;
         int[][][] dp = new int[n][3][2];
         //0的情况首先列出来
