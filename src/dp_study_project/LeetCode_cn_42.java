@@ -3,7 +3,7 @@ package dp_study_project;
 import java.util.Queue;
 import java.util.Stack;
 
-public class LeetCode_cn_49 {
+public class LeetCode_cn_42 {
     /**
      * 对于每个位置i，可以接的水量等于左边的最大，右边的最大，减去当前的高度
      * @param height

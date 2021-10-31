@@ -165,6 +165,15 @@ import dp_study_project.*;
  * day8
  * 【最佳买卖股票时机含冷冻期】           {@link LeetCode_cn_309}
  * 【买卖股票的最佳时机含手续费】          {@link LeetCode_cn_714}
+ * day9
+ * 【单词拆分】                       {@link LeetCode_cn_139}
+ * 【接雨水】                         {@link LeetCode_cn_42}
+ * day10
+ * 【等差数列划分】                     {@link LeetCode_cn_413}
+ * 【解码方法】                       {@link LeetCode_cn_91}
+ * day11
+ * 【丑数 II】                        {@link LeetCode_cn_264}
+ * 【不同的二叉搜索树】                   {@link LeetCode_cn_96}
  *
  *
  */
