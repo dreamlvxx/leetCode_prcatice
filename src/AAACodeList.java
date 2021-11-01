@@ -174,8 +174,19 @@ import dp_study_project.*;
  * day11
  * 【丑数 II】                        {@link LeetCode_cn_264}
  * 【不同的二叉搜索树】                   {@link LeetCode_cn_96}
+ * day12
+ * 【杨辉三角】                       {@link LeetCode118}
+ * 【杨辉三角 II】                    {@link LeetCode_cn_119}
  *
  *
+ * ===========================================================剑指OFFER专项突破-学习计划==============================================
+ * 【剑指 Offer II 001. 整数除法】                              {@link jz_offer_studp_project.JZ_cn_001}
+ * 【剑指 Offer II 002. 二进制加法】                             {@link jz_offer_studp_project.JZ_cn_002}
+ * 【剑指 Offer II 003. 前 n 个数字二进制中 1 的个数】             {@link jz_offer_studp_project.JZ_cn_003}
+ * 【剑指 Offer II 004. 只出现一次的数字】                          {@link jz_offer_studp_project.JZ_cn_004}
+ * 【剑指 Offer II 005. 单词长度的最大乘积】                     {@link jz_offer_studp_project.JZ_cn_005}
+ * 【剑指 Offer II 006. 排序数组中两个数字之和】                   {@link jz_offer_studp_project.JZ_cn_006}
+ * 【剑指 Offer II 007. 数组中和为 0 的三个数】                      {@link jz_offer_studp_project.JZ_cn_007}
  */
 public interface AAACodeList{
 
