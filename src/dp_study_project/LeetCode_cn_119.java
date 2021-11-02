@@ -20,6 +20,7 @@ public class LeetCode_cn_119 {
             }
             res.add(temp);
         }
+        System.out.println();
         return res;
     }
 }

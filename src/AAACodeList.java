@@ -177,6 +177,9 @@ import dp_study_project.*;
  * day12
  * 【杨辉三角】                       {@link LeetCode118}
  * 【杨辉三角 II】                    {@link LeetCode_cn_119}
+ * day13
+ * 【931. 下降路径最小和】               {@link LeetCode_cn_931}
+ * 【三角形最小路径和】                   {@link LeetCode_cn_120}
  *
  *
  * ===========================================================剑指OFFER专项突破-学习计划==============================================
@@ -187,6 +190,7 @@ import dp_study_project.*;
  * 【剑指 Offer II 005. 单词长度的最大乘积】                     {@link jz_offer_studp_project.JZ_cn_005}
  * 【剑指 Offer II 006. 排序数组中两个数字之和】                   {@link jz_offer_studp_project.JZ_cn_006}
  * 【剑指 Offer II 007. 数组中和为 0 的三个数】                      {@link jz_offer_studp_project.JZ_cn_007}
+ *
  */
 public interface AAACodeList{
 
