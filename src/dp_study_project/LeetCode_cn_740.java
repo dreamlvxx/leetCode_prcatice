@@ -66,6 +66,28 @@ public class LeetCode_cn_740 {
         return dp[maxVal];
     }
 
+    //第二次
+    public int deleteAndEarn3(int[] nums) {
+        int n = nums.length;
+        if(n == 1){
+            return nums[0];
+        }
+        int max = nums[0];
+        for(int i = 1;i < n;i ++){
+            max = Math.max(max,nums[i]);
+        }
+        int[] arr = new int[max + 1];
+        for(int i = 0;i < n;i ++){
+            arr[nums[i]] ++;
+        }
+        int[] dp = new int[max + 1];
+        dp[1] = arr[1] * 1;
+        for(int i = 2;i <= max;i ++){
+            dp[i] = Math.max(dp[i - 1],dp[i - 2] + arr[i] * i);
+        }
+        return dp[max];
+    }
+
 
 
 

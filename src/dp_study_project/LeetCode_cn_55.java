@@ -35,4 +35,24 @@ public class LeetCode_cn_55 {
         return dp[n - 1];
     }
 
+    //第二次 正向填充 从当前可以跳到后面的的位置进行填充
+    public boolean canJump1(int[] nums) {
+        int n = nums.length;
+        boolean[] dp = new boolean[n];
+        dp[0] = true;
+        for(int i = 0;i < n;i ++){
+            if(dp[i]){
+                for(int j = 1;j <= nums[i];j ++){
+                    if(j + i == n){
+                        return true;
+                    }
+                    dp[j + i] = true;
+                }
+            }else{
+                return false;
+            }
+        }
+        return dp[n - 1];
+    }
+
 }

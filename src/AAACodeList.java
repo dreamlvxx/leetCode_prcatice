@@ -146,11 +146,11 @@ import dp_study_project.*;
  * 【使用最小花费爬楼梯】2*          {@link LeetCode_cn_746}
  * day3
  * 【打家劫舍】2                  {@link LeetCode_cn_198}
- * 【打家劫舍 II】                {@link LeetCode_cn_213}
- * 【删除并获得点数】*                {@link LeetCode_cn_740}
+ * 【打家劫舍 II】2                {@link LeetCode_cn_213}
+ * 【删除并获得点数】2*                {@link LeetCode_cn_740}
  * day4
- * 【跳跃游戏】                   {@link LeetCode_cn_55}
- * 【跳跃游戏 II】                {@link LeetCode_cn_45}
+ * 【跳跃游戏】2                   {@link LeetCode_cn_55}
+ * 【跳跃游戏 II】2                {@link LeetCode_cn_45}
  * day5
  * 【最大子序和】                  {@link LeetCode_cn_53}
  *【环形子数组的最大和】           {@link LeetCode_cn_918}
