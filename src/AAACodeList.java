@@ -152,8 +152,8 @@ import dp_study_project.*;
  * 【跳跃游戏】2                   {@link LeetCode_cn_55}
  * 【跳跃游戏 II】2                {@link LeetCode_cn_45}
  * day5
- * 【最大子序和】                  {@link LeetCode_cn_53}
- *【环形子数组的最大和】           {@link LeetCode_cn_918}
+ * 【最大子序和】2                  {@link LeetCode_cn_53}
+ *【环形子数组的最大和】**           {@link LeetCode_cn_918}
  * day6
  * 【乘积最大子数组】                {@link LeetCode_cn_152}
  *【乘积为正数的最长子数组长度】     {@link LeetCode_cn_1567}
