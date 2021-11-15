@@ -26,4 +26,25 @@ public class LeetCode_cn_53 {
         }
         return res;
     }
+
+    //第二次
+    public int maxSubArray1(int[] nums) {
+        int n = nums.length;
+        if(n == 0){
+            return 0;
+        }
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        for(int i = 1;i < n;i ++){
+            dp[i] = nums[i];
+            if(dp[i - 1] > 0){
+                dp[i] = Math.max(dp[i],dp[i - 1] + nums[i]);
+            }
+        }
+        int max = Integer.MIN_VALUE;
+        for(int i = 0;i < n;i ++){
+            max = Math.max(max,dp[i]);
+        }
+        return max;
+    }
 }
