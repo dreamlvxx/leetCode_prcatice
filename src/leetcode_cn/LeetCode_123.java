@@ -52,4 +52,27 @@ public class LeetCode_123 {
         //最后判断最大值，手中应该是不持有
         return Math.max(0, Math.max(dp[n - 1][2][0], dp[n - 1][1][0]));
     }
+
+    //第二次
+    public int maxProfit2(int[] prices) {
+        int n = prices.length;
+        int[][][] dp = new int[n][3][2];
+        int MIN_VALUE = Integer.MIN_VALUE / 2;
+        dp[0][0][0] = 0;
+        dp[0][0][1] = -prices[0];
+        dp[0][1][0] = MIN_VALUE;
+        dp[0][1][1] = MIN_VALUE;
+        dp[0][2][0] = MIN_VALUE;
+        dp[0][2][1] = MIN_VALUE;
+
+        for(int i = 1;i < n;i ++){
+            dp[i][0][0] = 0;
+            dp[i][0][1] = Math.max(dp[i - 1][0][1],dp[i - 1][0][0] - prices[i]);
+            dp[i][1][0] = Math.max(dp[i - 1][1][0],dp[i - 1][0][1] + prices[i]);
+            dp[i][1][1] = Math.max(dp[i - 1][1][1],dp[i - 1][1][0] - prices[i]);
+            dp[i][2][0] = Math.max(dp[i - 1][2][0],dp[i - 1][1][1] + prices[i]);
+            dp[i][2][1] = MIN_VALUE;
+        }
+        return Math.max(Math.max(dp[n - 1][1][0],dp[n - 1][2][0]),0);
+    }
 }
