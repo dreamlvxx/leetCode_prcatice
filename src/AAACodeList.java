@@ -156,9 +156,12 @@ import dp_study_project.*;
  * day5
  * 【最大子序和】2                  {@link LeetCode_cn_53}
  *【环形子数组的最大和】2**           {@link LeetCode_cn_918}
+ * 【最大连续1的个数 II】                {@link LeetCode_cn_487}
  * day6
  * 【乘积最大子数组】2*                {@link LeetCode_cn_152}
- *【乘积为正数的最长子数组长度】**     {@link LeetCode_cn_1567}
+ *【乘积为正数的最长子数组长度】**         {@link LeetCode_cn_1567}
+ * 【经过一次操作后的最大子数组和】            {@link LeetCode_cn_1746}
+ *
  * day7
  * 【买卖的最佳时机】2                    {@link LeeCode121}
  * 【买卖股票的最佳时机 II】2          {@link LeetCode_cn_122}
@@ -197,7 +200,7 @@ import dp_study_project.*;
  * 【最长回文子序列】                    {@link LeetCode_cn_516}
  * day18
  * 【最长递增子序列】                    {@link LeetCode_cn_300}
- * 【摆动序列】**                       {@link LeetCode_cn_376}
+ * 【摆动序列】2**                       {@link LeetCode_cn_376}
  * day19
  * 【判断子序列】                      {@link LeetCode_cn_392}
  * 【最长公共子序列】                    {@link LeetCode_cn_1143}
