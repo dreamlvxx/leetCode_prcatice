@@ -161,6 +161,7 @@ import dp_study_project.*;
  * 【乘积最大子数组】2*                {@link LeetCode_cn_152}
  *【乘积为正数的最长子数组长度】**         {@link LeetCode_cn_1567}
  * 【经过一次操作后的最大子数组和】            {@link LeetCode_cn_1746}
+ * 【抛掷硬币】                               {@link LeetCode_cn_1230}
  *
  * day7
  * 【买卖的最佳时机】2                    {@link LeeCode121}
