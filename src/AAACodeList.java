@@ -172,6 +172,7 @@ import dp_study_project.*;
  * day8
  * 【最佳买卖股票时机含冷冻期】2           {@link LeetCode_cn_309}
  * 【买卖股票的最佳时机含手续费】2          {@link LeetCode_cn_714}
+ * 【两个字符串的最小ASCII删除和】          {@link LeetCode_cn_712}
  * day9
  * 【单词拆分】                       {@link LeetCode_cn_139}
  * 【接雨水】                         {@link LeetCode_cn_42}
