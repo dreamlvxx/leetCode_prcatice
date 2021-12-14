@@ -1,58 +1,27 @@
 package jz_offer_studp_project;
 
 public class JZ_cn_019 {
-    public boolean validPalindrome(String s) {
-        boolean hasDel = false;
-        int left = 0;
-        int right = s.length() - 1;
-        while (left <= right){
-            if (!Character.isLetterOrDigit(s.charAt(left))){
-                left ++;
-            }else if(!Character.isLetterOrDigit(s.charAt(right))){
-                right --;
-            }else{
-                char a = Character.toLowerCase(s.charAt(left));
-                char b = Character.toLowerCase(s.charAt(right));
-                if(a != b){
-                    break;
-                }
-                left ++;
-                right --;
+    public static void main(String[] args) {
+        boolean res = validPalindrome("deeee");
+        System.out.println("" + res);
+    }
+    public static boolean validPalindrome(String s) {
+        for(int left = 0,right = s.length() - 1;left <= right;left ++,right --){
+            if(s.charAt(left) != s.charAt(right)){
+                return isPar(s,left,right - 1) || isPar(s,left + 1,right);
             }
         }
-        int left2 = left + 1;
-        int right2 = right;
-        while (left <= right){
-            if (!Character.isLetterOrDigit(s.charAt(left))){
-                left ++;
-            }else if(!Character.isLetterOrDigit(s.charAt(right))){
-                right --;
-            }else{
-                char a = Character.toLowerCase(s.charAt(left));
-                char b = Character.toLowerCase(s.charAt(right));
-                if(a != b){
+        return true;
+    }
 
-                    return false;
-                }
-                left ++;
-                right --;
-            }
-        }
+    public static boolean isPar(String s,int left,int right){
+        System.out.println(left + " --" + right);
         while (left <= right){
-            if (!Character.isLetterOrDigit(s.charAt(left))){
-                left ++;
-            }else if(!Character.isLetterOrDigit(s.charAt(right))){
-                right --;
-            }else{
-                char a = Character.toLowerCase(s.charAt(left));
-                char b = Character.toLowerCase(s.charAt(right));
-                if(a != b){
-
-                    return false;
-                }
-                left ++;
-                right --;
+            if (s.charAt(left) != s.charAt(right)){
+                return false;
             }
+            left ++;
+            right--;
         }
         return true;
     }
