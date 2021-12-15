@@ -13,7 +13,7 @@ public class JK06Code1 {
         }
     }
 
-    //单链表反转
+    //单链表反转 迭代
     public Node revertList(Node head) {
         if(null == head){
             return null;
@@ -29,7 +29,7 @@ public class JK06Code1 {
         return head;
     }
 
-    //单链表反转 递归解法
+    //单链表反转 递归
     public Node revertList1(Node head){
         if (head == null || head.next == null)return head;//找到最后一个节点
         Node newHead = revertList(head.next);//这个直接从头遍历到最后一个节点了
