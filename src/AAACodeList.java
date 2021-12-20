@@ -229,6 +229,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 012. 左右两边子数组的和相等】                       {@link JZ_cn_012}
  * 【剑指 Offer II 018. 有效的回文】                                 {@link JZ_cn_018}
  * 【剑指 Offer II 023. 两个链表的第一个重合节点】                      {@link JZ_cn_023}
+ * 【剑指 Offer II 027. 回文链表】**                                  {@link JZ_cn_027}
  */
 public interface AAACodeList{
 
