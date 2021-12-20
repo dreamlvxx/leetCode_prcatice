@@ -230,6 +230,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 018. 有效的回文】                                 {@link JZ_cn_018}
  * 【剑指 Offer II 023. 两个链表的第一个重合节点】                      {@link JZ_cn_023}
  * 【剑指 Offer II 027. 回文链表】**                                  {@link JZ_cn_027}
+ * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
  */
 public interface AAACodeList{
 
