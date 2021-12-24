@@ -1,6 +1,14 @@
 package leetcode;
 
+import kotlin.text.Charsets;
+
+import java.nio.charset.Charset;
+
 public class LeeCode14 {
+
+    public static void main(String[] args) {
+        String a = new String("sss".getBytes());
+    }
 
     //Horizontal scanning  数组从头到尾检查
     public String longestCommonPrefix(String[] strs) {

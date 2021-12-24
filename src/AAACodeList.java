@@ -231,6 +231,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 023. 两个链表的第一个重合节点】                      {@link JZ_cn_023}
  * 【剑指 Offer II 027. 回文链表】**                                  {@link JZ_cn_027}
  * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
+ * 【剑指 Offer II 034. 外星语言是否排序】                              {@link JZ_cn_034}
  */
 public interface AAACodeList{
 
