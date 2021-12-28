@@ -233,6 +233,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
  * 【剑指 Offer II 034. 外星语言是否排序】*                             {@link JZ_cn_034}
  * 【剑指 Offer II 101. 分割等和子集】*                        {@link JZ_cn_101}
+ * 【剑指 Offer II 052. 展平二叉搜索树】                               {@link JZ_cn_052}
  */
 public interface AAACodeList{
 
