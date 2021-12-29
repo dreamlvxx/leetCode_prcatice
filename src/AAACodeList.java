@@ -39,7 +39,7 @@ import jz_offer_studp_project.*;
  *
  *
  * -----------------------------------------极客时间----------------------------------------------------------
- * 【单链表反转】                     {@link JK06Code1}
+ * 【单链表反转】*                     {@link JK06Code1}
  * 【插入 冒泡 选择 归并  快速 排序】 {@link JK11Code}
  * AC自动机                       {@link ACAutoMechine}
  * 判断链表环的一系列问题         {@link JK06Code02}
@@ -61,7 +61,7 @@ import jz_offer_studp_project.*;
  *
  * ---------------------------------------------LeeCode----------------------------------------------------------------------
  * 【两个链表交汇结点】*               {@link LeeCode160} favorite amazing
- * 【树的非递归遍历】                {@link TreeNodeTravelByIterator}
+ * 【树的非递归遍历】*                {@link TreeNodeTravelByIterator}
  * 【最小乱序区域】                   {@link LeeCode581} favorite 最优解法 O(n)
  * 【最长不重复串】                   {@link LeeCode003} dp问题 双指针
  * 【在一个字符串中寻找最大回文串】   {@link LeeCode005} dp
@@ -233,7 +233,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
  * 【剑指 Offer II 034. 外星语言是否排序】*                             {@link JZ_cn_034}
  * 【剑指 Offer II 101. 分割等和子集】*                        {@link JZ_cn_101}
- * 【剑指 Offer II 052. 展平二叉搜索树】                               {@link JZ_cn_052}
+ * 【剑指 Offer II 052. 展平二叉搜索树】*                               {@link JZ_cn_052}
  */
 public interface AAACodeList{
 

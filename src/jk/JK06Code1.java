@@ -49,4 +49,14 @@ public class JK06Code1 {
         head.next = null;
         return newHead;
     }
+
+    public Node rever1(Node head){
+        if (head.next == null){
+            return head;
+        }
+        Node newHead = rever(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
 }

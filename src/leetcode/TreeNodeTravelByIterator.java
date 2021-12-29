@@ -21,7 +21,7 @@ public class TreeNodeTravelByIterator {
     }
 
     /**
-     * 前序遍历
+     * 前序遍历 - 中左右
      *
      * @param root
      */
@@ -46,14 +46,16 @@ public class TreeNodeTravelByIterator {
 
     /**
      * 中序遍历
+     * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/
      *
      * @param root
      * @return
      */
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        //递归与迭代的区别就是递归隐式维护了一个栈，此处我们就模拟这个栈
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
 
         while (cur != null || !stack.empty()) {
@@ -65,14 +67,33 @@ public class TreeNodeTravelByIterator {
             list.add(cur.val);
             cur = cur.right;
         }
-
         return list;
+    }
+
+    public List<Integer> inorder(TreeNode root){
+        List<Integer> res = new ArrayList<>();
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+
+        while (root!=null || !stack.isEmpty()){
+            while (cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            res.add(cur.val);
+            cur = cur.right;
+        }
+        return  res;
     }
 
 
 
+
     /**
-     * 后序遍历
+     * 后序遍历 --左右中
+     * 后序遍历就是前序遍历然后reverse一下
      *
      * @param root
      * @return
