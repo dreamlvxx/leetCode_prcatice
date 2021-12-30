@@ -236,6 +236,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 052. 展平二叉搜索树】*                               {@link JZ_cn_052}
  * 【剑指 Offer II 056. 二叉搜索树中两个节点之和】                      {@link JZ_cn_056}
  * 【剑指 Offer II 068. 查找插入位置】                                {@link JZ_cn_068}
+ * 【剑指 Offer II 069. 山峰数组的顶部】                               {@link JZ_cn_069}
  */
 public interface AAACodeList{
 
