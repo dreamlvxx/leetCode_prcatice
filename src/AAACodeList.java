@@ -240,6 +240,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 072. 求平方根】                                      {@link JZ_cn_072}
  * 【剑指 Offer II 075. 数组相对排序】* 计数排序                             {@link JZ_cn_075}
  * 【剑指 Offer II 081. 允许重复选择元素的组合】                           {@link JZ_cn_081}
+ * 【剑指 Offer II 082. 含有重复元素集合的组合】                           {@link JZ_cn_082}
  *
  */
 public interface AAACodeList{
