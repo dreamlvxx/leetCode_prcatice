@@ -12,12 +12,16 @@ class JZ_cn_072 {
         var right = x / 2 + 1
         while (left <= right){
             val mid = left + (right - left shr 1)
-            if(mid < x / mid){
-                left = mid + 1;
-            }else if(mid > x / mid){
-                right = mid - 1;
-            }else{
-                return mid;
+            when {
+                mid < x / mid -> {
+                    left = mid + 1;
+                }
+                mid > x / mid -> {
+                    right = mid - 1;
+                }
+                else -> {
+                    return mid;
+                }
             }
         }
         return right
