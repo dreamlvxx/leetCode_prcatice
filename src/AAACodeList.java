@@ -74,7 +74,7 @@ import jz_offer_studp_project.*;
  * 删除倒数第几个结点             {@link LeeCode19}
  * 括号匹配                       {@link LeeCode20}
  * 合并两个有序链表               {@link LeeCode21} favorite
- * 【Same Tree】                   {@link LeeCode100} dfs
+ * 【Same Tree】                   {@link LeeCode100} dfs bfs
  * 是否为对称二叉树               {@link LeeCode101} dfs favorite
  * Convert Sorted Array to Binary Search Tree  @{@link LeeCode108} dfs
  * Flatten Binary Tree to Linked List {@link LeeCode114} dfs favorite
