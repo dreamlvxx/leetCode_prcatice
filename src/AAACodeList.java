@@ -232,7 +232,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 027. 回文链表】**                                  {@link JZ_cn_027}
  * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
  * 【剑指 Offer II 034. 外星语言是否排序】*                             {@link JZ_cn_034}
- * 【剑指 Offer II 101. 分割等和子集】*                        {@link JZ_cn_101}
+ * 【剑指 Offer II 101. 分割等和子集】*                               {@link JZ_cn_101}
  * 【剑指 Offer II 052. 展平二叉搜索树】*                               {@link JZ_cn_052}
  * 【剑指 Offer II 056. 二叉搜索树中两个节点之和】                      {@link JZ_cn_056}
  * 【剑指 Offer II 068. 查找插入位置】                                {@link JZ_cn_068}
@@ -242,6 +242,7 @@ import jz_offer_studp_project.*;
  * 【剑指 Offer II 081. 允许重复选择元素的组合】*                           {@link JZ_cn_081}
  * 【剑指 Offer II 082. 含有重复元素集合的组合】                           {@link JZ_cn_082}
  * 【剑指 Offer II 083. 没有重复元素集合的全排列】**                         {@link JZ_cn_083}
+ * 【剑指 Offer II 084. 含有重复元素集合的全排列 】*                         {@link JZ_cn_084}
  *
  */
 public interface AAACodeList{
