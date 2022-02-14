@@ -1,67 +1,8 @@
 import jk.*;
 import leetcode.*;
-import offer.*;
-import dfs.*;
-import leetcode_cn.*;
-import dp_study_project.*;
-import jz_offer_studp_project.*;
-
 /**
- * --------------------https://www.nowcoder.com/ta/coding-interviews----------------------------------------------
- * 【重新建立一个二叉树】+             {@link JZ7}
- * 【旋转数组的最小数字】+             {@link JZ11} [数组]
- * 【上楼梯问题】+                     {@link JZ69}
- * 【变态上楼梯】+                     {@link JZ71}
- * 【矩形覆盖】+                       {@link JZ70} [递归]
- * 【调整数组中的数字位置】+           {@link JZ21}
- * 【返回单链表中倒数第K个结点】+      {@link JZ54} [单链表]
- * 【合并两个有序单链表】+             {@link JZ25} [单链表]
- * 【树的子结构】                     {@link JZ26} [树]
- * 【二叉树的镜像】                   {@link Offer18} [树]
- * 【二叉搜索树的后序遍历序列】       {@link VerifySequenceIsBST}[二叉树]
- * 【栈的压入、弹出序列】             {@link StackPushAndPop} [栈]
- * 【二叉树中和为某一值的路径】       {@link FindPathSumTotarget}[二叉树]
- * 【数组中出现次数超过一半的数字】   {@link Vote} 摩尔投票算法
- * 【二叉搜索树与双向链表】           {@link ConvertTreeToSequenceTree} [二叉树] [递归]
- * 【复杂链表的复制】                 {@link CopyRandomTree} [链表]
- * 从尾到头打印一个链表           {@link Offer02}
- * 两个栈实现一个队列             {@link Offer05}
- * 斐波那契数列返回指定值         {@link Offer07}
- * 二进制数中1的个数              {@link Offer11} [二进制]
- * 一个数字的整次方               {@link Offer12}
- * 翻转单链表                     {@link Offer15} [单链表]
- * 顺时针打印矩阵                 {@link PrintMatrix} [数组]
- * 最小的K个数                    {@link MinusK} [数组]
- * 整数中1出现的次数（从1到n整数中1出现的次数）  {@link OnceShow} 未完成。。。
- * 把数组排成最小的数                {@link AddToMin}  未完成
- * 第一个只出现一次的字符              {@link FirstOnceNumber}
- * 数字在排序数组中出现的次数            {@link FindShowHowMany} 二分查找的妙用
- *
- *
- * -----------------------------------------极客时间----------------------------------------------------------
- * 【单链表反转】*                     {@link JK06Code1}
- * 【插入 冒泡 选择 归并  快速 排序】 {@link JK11Code}
- * AC自动机                       {@link ACAutoMechine}
- * 判断链表环的一系列问题         {@link JK06Code02}
- * java实现基本的栈               {@link JK08Code01}
- * java实现基本的队列             {@link JK09Code1}
- * 循环队列实现                   {@link JK09Code02}
- * 上楼梯问题                     {@link JK10Code01}
- * 二分查找(最简单的，无重复元素) {@link JK15Code01}
- * 求解一个数的平方根             {@link JK15Code02}
- * 二分查找变形                   {@link JK16Code}
- * 跳表实现                       {@link JK17Code01}
- * 二叉查找树的操作               {@link JK24Code}
- * 计算一个数组的有序度           {@link JK38Code1}
- * 【八皇后问题】                     {@link JK39Code1} [回溯]
- * 背包算法--动态规划解法         {@link JK40Code01}
- * 背包问题 最大总价值            {@link JK40Code02}
- * 拓扑排序                       {@link JK43Code01}
- * KMP算法                        {@link KMP}
  *
  * ---------------------------------------------LeeCode----------------------------------------------------------------------
- * 【两个链表交汇结点】*               {@link LeeCode160} favorite amazing
- * 【树的非递归遍历】*                {@link TreeNodeTravelByIterator}
  * 【最小乱序区域】                   {@link LeeCode581} favorite 最优解法 O(n)
  * 【最长不重复串】                   {@link LeeCode003} dp问题 双指针
  * 【在一个字符串中寻找最大回文串】   {@link LeeCode005} dp
@@ -74,8 +15,6 @@ import jz_offer_studp_project.*;
  * 删除倒数第几个结点             {@link LeeCode19}
  * 括号匹配                       {@link LeeCode20}
  * 合并两个有序链表               {@link LeeCode21} favorite
- * 【Same Tree】                   {@link LeeCode100} dfs bfs
- * 是否为对称二叉树               {@link LeeCode101} dfs favorite
  * Convert Sorted Array to Binary Search Tree  @{@link LeeCode108} dfs
  * Flatten Binary Tree to Linked List {@link LeeCode114} dfs favorite
  * Populating Next Right Pointers in Each Node  {@link LeeCode116} favorite
@@ -116,134 +55,7 @@ import jz_offer_studp_project.*;
  * Product of Array Except Self  {@link LeeCode227} [数学规律]
  * Subsets                      {@link LeeCode78} {递归，回溯}
  * Maximum Depth of N-ary Tree
- *
- * ===================================================DFS===============================================
- * 【Leaf-Similar Trees】             {@link LeeCode872} 二叉树
- * Increasing Order Search Tree   {@link LeeCode897} 二叉树
- * Maximum Depth of N-ary Tree    {@link LeeCode559} 二叉树
- * Maximum Depth of Binary Tree   {@link LeeCode104}
- * Number of Islands              {@link LeeCode200}
- *
- * ==================================================DP===================================================
- *
- * 【Word Break】                  {@link LeeCode139} DP
- * 【买卖的最佳时机】               {@link LeeCode121} good
- * 【爬楼梯问题】                     {@link LeeCode70}
- * 【连续串最大和】                   {@link LeeCode53}
- * 【隔间偷】                         {@link LeeCode198}
- * 【杨辉三角】                       {@link LeetCode118}
- * 【买卖股票3】                      {@link LeetCode_123}
- *
- *
- * ==================================================
  * 【无序数组中位数】              {@link MediumNumber} 快排思想 + 二分查找
- *
- * ==================================================DP学习计划======================================
- * day1
- * 【斐波那契数】2                  {@link LeetCode_cn_509}
- * 【第 N 个泰波那契数】             {@link LeetCode_cn_1137}
- * day2
- * 【爬楼梯】2                    {@link LeetCode_cn_70}
- * 【使用最小花费爬楼梯】2*          {@link LeetCode_cn_746}
- * day3
- * 【打家劫舍】2                  {@link LeetCode_cn_198}
- * 【打家劫舍 II】2                {@link LeetCode_cn_213}
- * 【删除并获得点数】2*                {@link LeetCode_cn_740}
- * 【粉刷房子】                       {@link LeetCode_cn_256}
- * 【粉刷房子2】                          {@link LeetCode_cn_265}
- * day4
- * 【跳跃游戏】2                   {@link LeetCode_cn_55}
- * 【跳跃游戏 II】2                {@link LeetCode_cn_45}
- * day5
- * 【最大子序和】2                  {@link LeetCode_cn_53}
- *【环形子数组的最大和】2**           {@link LeetCode_cn_918}
- * 【最大连续1的个数 II】                {@link LeetCode_cn_487}
- * day6
- * 【乘积最大子数组】2*                {@link LeetCode_cn_152}
- *【乘积为正数的最长子数组长度】**         {@link LeetCode_cn_1567}
- * 【经过一次操作后的最大子数组和】            {@link LeetCode_cn_1746}
- * 【抛掷硬币】                               {@link LeetCode_cn_1230}
- *
- * day7
- * 【买卖的最佳时机】2                    {@link LeeCode121}
- * 【买卖股票的最佳时机 II】2          {@link LeetCode_cn_122}
- * 【买卖股票的最佳时机 III】2          {@link LeetCode_123}
- * 【买卖股票的最佳时机 IV】2           {@link LeetCode_cn_188}
- * 【不相交的线】                          {@link LeetCode_cn_1035}
- * day8
- * 【最佳买卖股票时机含冷冻期】2           {@link LeetCode_cn_309}
- * 【买卖股票的最佳时机含手续费】2          {@link LeetCode_cn_714}
- * 【两个字符串的最小ASCII删除和】          {@link LeetCode_cn_712}
- * day9
- * 【单词拆分】                       {@link LeetCode_cn_139}
- * 【接雨水】                         {@link LeetCode_cn_42}
- * day10
- * 【等差数列划分】                     {@link LeetCode_cn_413}
- * 【解码方法】                       {@link LeetCode_cn_91}
- * day11
- * 【丑数 II】                        {@link LeetCode_cn_264}
- * 【不同的二叉搜索树】                   {@link LeetCode_cn_96}
- * day12
- * 【杨辉三角】                       {@link LeetCode118}
- * 【杨辉三角 II】                    {@link LeetCode_cn_119}
- * day13
- * 【931. 下降路径最小和】               {@link LeetCode_cn_931}
- * 【三角形最小路径和】                   {@link LeetCode_cn_120}
- * day14
- * 【矩阵区域和】                      {@link LeetCode_cn_1314}
- * 【二维区域和检索 - 矩阵不可变】        {@link LeetCode_cn_304}
- * day15
- * 【不同路径】                       {@link LeetCode_cn_62}
- * 【不同路径 II】                    {@link LeetCode_cn_63}
- * day16
- * 【最小路径和】                      {@link LeetCode_cn_64}
- * 【统计全为 1 的正方形子矩阵】         {@link LeetCode_cn_1277}
- * 【最大正方形】                      {@link LeetCode_cn_221}
- * day17
- * 【最长回文子串】                     {@link LeetCode_cn_5}
- * 【最长回文子序列】                    {@link LeetCode_cn_516}
- * day18
- * 【最长递增子序列】                    {@link LeetCode_cn_300}
- * 【摆动序列】2**                       {@link LeetCode_cn_376}
- * day19
- * 【判断子序列】                      {@link LeetCode_cn_392}
- * 【最长公共子序列】                    {@link LeetCode_cn_1143}
- * 【编辑距离】                           {@link LeetCode_cn_72}
- * day20
- * 【零钱兑换】                       {@link LeetCode_cn_322}
- * 【 零钱兑换 II】                   {@link LeetCode_cn_518}
- * day21
- * 【组合总和 Ⅳ】                     {@link LeetCoed_cn_377}
- * 【整数拆分】                       {@link LeetCode_cn_343}
- * 【完全平方数】                      {@link LeetCode_cn_279}
- *
- * ===========================================================剑指OFFER专项突破-学习计划==============================================
- * 【剑指 Offer II 001. 整数除法】                              {@link JZ_cn_001}
- * 【剑指 Offer II 002. 二进制加法】                             {@link JZ_cn_002}
- * 【剑指 Offer II 003. 前 n 个数字二进制中 1 的个数】             {@link JZ_cn_003}
- * 【剑指 Offer II 004. 只出现一次的数字】                          {@link JZ_cn_004}
- * 【剑指 Offer II 005. 单词长度的最大乘积】                     {@link JZ_cn_005}
- * 【剑指 Offer II 006. 排序数组中两个数字之和】                   {@link JZ_cn_006}
- * 【剑指 Offer II 007. 数组中和为 0 的三个数】                      {@link JZ_cn_007}
- * 【剑指 Offer II 088. 爬楼梯的最少成本】                          {@link JZ_cn_088}
- * 【剑指 Offer II 012. 左右两边子数组的和相等】                       {@link JZ_cn_012}
- * 【剑指 Offer II 018. 有效的回文】                                 {@link JZ_cn_018}
- * 【剑指 Offer II 023. 两个链表的第一个重合节点】                      {@link JZ_cn_023}
- * 【剑指 Offer II 027. 回文链表】**                                  {@link JZ_cn_027}
- * 【剑指 Offer II 032. 有效的变位词】                                {@link JZ_cn_032}
- * 【剑指 Offer II 034. 外星语言是否排序】*                             {@link JZ_cn_034}
- * 【剑指 Offer II 101. 分割等和子集】*                               {@link JZ_cn_101}
- * 【剑指 Offer II 052. 展平二叉搜索树】*                               {@link JZ_cn_052}
- * 【剑指 Offer II 056. 二叉搜索树中两个节点之和】                      {@link JZ_cn_056}
- * 【剑指 Offer II 068. 查找插入位置】                                {@link JZ_cn_068}
- * 【剑指 Offer II 069. 山峰数组的顶部】                               {@link JZ_cn_069}
- * 【剑指 Offer II 072. 求平方根】                                      {@link JZ_cn_072}
- * 【剑指 Offer II 075. 数组相对排序】* 计数排序                             {@link JZ_cn_075}
- * 【剑指 Offer II 081. 允许重复选择元素的组合】*                           {@link JZ_cn_081}
- * 【剑指 Offer II 082. 含有重复元素集合的组合】                           {@link JZ_cn_082}
- * 【剑指 Offer II 083. 没有重复元素集合的全排列】**                         {@link JZ_cn_083}
- * 【剑指 Offer II 084. 含有重复元素集合的全排列 】*                         {@link JZ_cn_084}
- *
  */
 public interface AAACodeList{
 

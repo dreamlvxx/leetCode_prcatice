@@ -20,22 +20,16 @@ public class LeeCode100 {
 
 
     //dfs
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (null == p && null == q) {
+    public boolean isSameTree1(TreeNode p1, TreeNode p2) {
+        if (p1 == null && p2 == null) {
             return true;
+        } else if (p1 == null || p2 == null) {
+            return false;
+        } else if (p1.val != p2.val) {
+            return false;
         }
-        boolean res = false;
-        if (p != null && q != null) {
-            //满足三个条件，root val相等，左子树相同，右子树相同
-            if (p.val == q.val
-                    && isSameTree(p.left, q.left)
-                    && isSameTree(p.right, q.right)) {
-                res = true;
-            }
-        }
-        return res;
+        return isSameTree1(p1.left, p2.left) && isSameTree1(p1.right, p2.right);
     }
-
 
 
     //bfs
