@@ -2,32 +2,31 @@ package dp_study_project;
 
 public class LeetCode_cn_1567 {
     public int getMaxLen(int[] nums) {
-        if(nums.length == 0){
-            return 0;
-        }
-        int n = nums.length;
-        int[][] dp = new int[n][2];
+        int[] dpPlus = new int[nums.length];
+        int[] dpMinus = new int[nums.length];
+
         if(nums[0] > 0){
-            dp[0][0] = 0;
-            dp[0][1] = 1;
+            dpPlus[0] = 1;
+            dpMinus[0] = 0;
         }else if(nums[0] < 0){
-            dp[0][0] = 1;
-            dp[0][1] = 0;
+            dpPlus[0] = 0;
+            dpMinus[0] = 1;
         }
-        int maxLength = dp[0][1];
-        for(int i = 1;i < n;i ++){
+
+        int max = dpPlus[0];
+        for(int i = 1;i < nums.length;i ++){
             if(nums[i] > 0){
-                dp[i][0] = dp[i - 1][0] > 0? dp[i - 1][0] + 1 : 0;
-                dp[i][1] = dp[i - 1][1] + 1;
+                dpPlus[i] = dpPlus[i - 1] + 1;
+                dpMinus[i] = dpMinus[i - 1] > 0 ? dpMinus[i - 1] + 1 : 0;
             }else if(nums[i] < 0){
-                dp[i][0] = dp[i - 1][1] + 1;
-                dp[i][1] = dp[i - 1][0] > 0? dp[i - 1][0] + 1 : 0;
+                dpPlus[i] = dpMinus[i - 1] > 0 ? dpMinus[i - 1] + 1 : 0;
+                dpMinus[i] = dpPlus[i - 1] + 1;
             }else{
-                dp[i][0] = 0;
-                dp[i][1] = 0;
+                dpPlus[i] = 0;
+                dpMinus[i] = 0;
             }
-            maxLength = Math.max(maxLength,dp[i][1]);
+            max = Math.max(max,dpPlus[i]);
         }
-        return maxLength;
+        return max;
     }
 }

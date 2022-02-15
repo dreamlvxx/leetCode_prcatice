@@ -2,38 +2,17 @@ package dp_study_project;
 
 public class LeetCode_cn_45 {
     //动态规划
-    public int jump_dp(int[] nums) {
-        if (nums.length == 0){
-            return 0;
-        }
+    public int jump1(int[] nums) {
         int n = nums.length;
         int[] dp = new int[n];
-        for (int i = 0; i < n; i++) {
-            dp[i] = Integer.MAX_VALUE;
+        for(int i = 0;i < n;i ++){
+            dp[i] = n;
         }
         dp[0] = 0;
-        for (int i = 1; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                if(nums[j] + j >= i){
-                    dp[i] = Math.min(dp[i],dp[j] + 1);
-                }
-            }
-        }
-        return dp[n - 1];
-    }
-
-    //第二次
-    public int jump_dp2(int[] nums) {
-        int n = nums.length;
-        int[] dp = new int[n];
-        dp[0] = 0;
-        for(int i = 1;i < n;i ++){
-            dp[i] = Integer.MAX_VALUE;
-        }
         for(int i = 1;i < n;i ++){
             for(int j = 0;j < i;j ++){
                 if(j + nums[j] >= i){
-                    dp[i] = Math.min(dp[i],dp[j] + 1);
+                    dp[i] = Math.min(dp[j] + 1,dp[i]);
                 }
             }
         }
@@ -41,7 +20,7 @@ public class LeetCode_cn_45 {
     }
 
     //贪心
-    public int jump(int[] nums) {
+    public int jump2(int[] nums) {
         if(null == nums || nums.length == 0){
             return 0;
         }

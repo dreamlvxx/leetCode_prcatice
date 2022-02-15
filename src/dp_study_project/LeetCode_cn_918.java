@@ -1,7 +1,8 @@
 package dp_study_project;
 
-public class LeetCode_cn_918 {
+import java.util.Arrays;
 
+public class LeetCode_cn_918 {
     /**
      * 根据题解可知：
      * 环形子数组的最大和具有两种可能
@@ -14,68 +15,38 @@ public class LeetCode_cn_918 {
      * 用整个数组的和 sum减掉这个负数最小和即可实现原环型数组的最大和
      *
      **/
-    public int maxSubarraySumCircular(int[] A) {
-        int[] dp = new int[A.length];   //dp[i]用来记录以nums[i]结尾的最大子序列和
-        dp[0] = A[0];                   //初始化dp
-        int max = dp[0];                //最大子序列和
-        int sum = dp[0];                //整个数组的和
-
-//        求最大子序列和，见53题
-        for (int i = 1; i < dp.length; i++) {
-            sum += A[i];
-            dp[i] = A[i] + Math.max(dp[i - 1], 0);
-            max = Math.max(dp[i], max);
-        }
-
-        int min = 0;    //开始求A[1]~A[n-1]上的最小子序列和
-        for (int i = 1; i < dp.length - 1; i++) {
-            dp[i] = A[i] + Math.min(0, dp[i - 1]);
-            min = Math.min(dp[i], min);
-        }
-        return Math.max(sum - min, max);
-    }
-
     public int maxSubarraySumCircular_dp(int[] nums) {
-        if(nums.length == 0){
-            return 0;
+        if(nums.length == 1){
+            return nums[0];
         }
+        int all = 0;
         int n = nums.length;
-
-        int[] dp = new int[n];
-        dp[0] = nums[0];
-        for(int i = 1;i < n;i ++){
-            if(dp[i - 1] > 0){
-                dp[i] = dp[i - 1] + nums[i];
-            }else {
-                dp[i] = nums[i];
-            }
-        }
-
-        int maxValue = Integer.MIN_VALUE;
         for(int i = 0;i < n;i ++){
-            maxValue = Math.max(maxValue,dp[i]);
+            all += nums[i];
         }
 
-        int[] dpMin = new int[n];
-        dpMin[0] = nums[0];
-        for(int i = 1;i < n - 1;i ++){
-            if(dpMin[i - 1] < 0){
-                dpMin[i] = dpMin[i - 1] + nums[i];
-            }else{
-                dpMin[i] = nums[i];
-            }
+        int[] center = Arrays.copyOfRange(nums,1,nums.length - 1);
+        int[] dpMax = new int[nums.length];
+        int[] dpMin = new int[center.length];
+        dpMax[0] = nums[0];
+        dpMin[0] = center[0];
+        for(int i = 1;i < nums.length;i ++){
+            dpMax[i] = Math.max(dpMax[i - 1],0) + nums[i];
         }
-        int minValue = 0;
-        for(int i = 1;i < n - 1;i ++){
-            minValue = Math.min(minValue,dpMin[i]);
+        for(int i = 1;i < center.length;i ++){
+            dpMin[i] = Math.min(dpMin[i - 1],0) + center[i];
         }
 
-        int sum = 0;
+        int resMax = Integer.MIN_VALUE;
+        int resMin = Integer.MAX_VALUE;
         for(int i = 0;i < n;i ++){
-            sum += nums[i];
+            resMax = Math.max(resMax,dpMax[i]);
+        }
+        for(int i = 0;i < center.length;i ++){
+            resMin = Math.min(resMin,dpMin[i]);
         }
 
-        return Math.max(maxValue,sum - minValue);
+        return Math.max(resMax,all - resMin);
     }
 
 }
