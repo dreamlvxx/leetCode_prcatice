@@ -1,6 +1,10 @@
 package dp_study_project;
 
 public class LeetCode_cn_712 {
+    public static void main(String[] args) {
+        int a = 1 + 'a';
+        System.out.println("" + a);
+    }
     public int minimumDeleteSum(String s1, String s2) {
         int n = s1.length();
         int m = s2.length();

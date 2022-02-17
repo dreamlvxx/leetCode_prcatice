@@ -37,30 +37,5 @@ public class LeeCode121 {
         return dp[prices.length - 1][0];
     }
 
-    //第二次
-    public int maxProfit2(int[] prices) {
-        int n = prices.length;
-        int[][] dp = new int[n][2];
-        dp[0][0] = 0;
-        dp[0][1] = -prices[0];
-        for(int i = 1;i < n;i ++){
-            dp[i][0] = Math.max(dp[i - 1][0],dp[i - 1][1] + prices[i]);
-            dp[i][1] = Math.max(dp[i - 1][1],-prices[i]);
-        }
-        return dp[n - 1][0];
-    }
-
-    //solution
-    public int maxProfit(int prices[]) {
-        int minprice = Integer.MAX_VALUE;
-        int maxprofit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minprice)
-                minprice = prices[i];
-            else if (prices[i] - minprice > maxprofit)
-                maxprofit = prices[i] - minprice;
-        }
-        return maxprofit;
-    }
 
 }

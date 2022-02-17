@@ -10,27 +10,29 @@ public class LeetCode_cn_139 {
      * @param wordDict
      * @return
      */
-    public boolean wordBreak_dp(String s, List<String> wordDict) {
-        if (s == null || s.length() == 0) {
-            return true;
-        }
-        int n = s.length();
-        boolean[] dp = new boolean[n + 1];
+    public boolean wordBreak1(String s, List<String> wordDict) {
+        boolean[] dp = new boolean[s.length() + 1];
+
         dp[0] = true;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && wordDict.contains(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
+        for(int i = 1;i <= s.length();i ++){
+            for(String word : wordDict){
+                int len = word.length();
+                if(len <= i){
+                    String temp = s.substring(i - len,i);
+                    if(temp.equals(word) && dp[i - len]){
+                        dp[i] = true;
+                        break;
+                    }
+                }else{
+                    dp[i] = false;
                 }
             }
         }
-        return dp[n];
+        return dp[s.length()];
     }
 
     /**
      * DFS
-     *
      * @param s
      * @param wordDict
      * @return
@@ -40,11 +42,20 @@ public class LeetCode_cn_139 {
         return booleanwordBreak_dfs(s, wordDict, 0, visited);
     }
 
+    /**
+     * 从前往后匹配，start表示start位置之前的已经匹配，只要保证start往后的继续匹配，就可以了
+     * @param s
+     * @param wordDict
+     * @param start
+     * @param visited
+     * @return
+     */
     public boolean booleanwordBreak_dfs(String s, List<String> wordDict, int start, boolean[] visited) {
         for (String temp : wordDict) {
             int nextStart = start + temp.length();
             if (nextStart > s.length() || visited[nextStart]) continue;
 
+            //这里是从当前start开始往后，查找前缀能否匹配temp，所以并不能使用s.startWith，这个一直都是以0开始匹配
             if (s.indexOf(temp, start) == start) {
                 if (nextStart == s.length() || booleanwordBreak_dfs(s, wordDict, nextStart, visited)) {
                     return true;
@@ -57,6 +68,7 @@ public class LeetCode_cn_139 {
 
     /**
      * BFS
+     * 从0的位置开始寻找可以继续往后匹配的index，有几个就都push到queue里面，然后从这几个index继续找下一批index，直到出现inedx匹配到s.length()，否则就是无法匹配
      *
      * @param s
      * @param wordDict
@@ -74,6 +86,7 @@ public class LeetCode_cn_139 {
                     int nextStart = word.length() + start;
                     if (nextStart > s.length() || visited[nextStart]) continue;
                     if (s.indexOf(word, start) == start) {
+                        //出口
                         if (nextStart == s.length()) {
                             return true;
                         }

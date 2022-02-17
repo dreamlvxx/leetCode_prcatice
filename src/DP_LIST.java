@@ -22,43 +22,33 @@ public interface DP_LIST {
      * 【环形子数组的最大和】**           {@link LeetCode_cn_918}
      * 【乘积最大子数组】*               {@link LeetCode_cn_152}
      *
+     * 【买卖的最佳时机】                   {@link LeeCode121}
+     * 【买卖股票的最佳时机 II】             {@link LeetCode_cn_122}
+     * 【买卖股票的最佳时机 IV】             {@link LeetCode_cn_188}
+     * 【不相交的线】                       {@link LeetCode_cn_1035}
+     * 【最佳买卖股票时机含冷冻期】           {@link LeetCode_cn_309}
+     * 【买卖股票的最佳时机含手续费】2        {@link LeetCode_cn_714}
+     * 【接雨水】                          {@link LeetCode_cn_42}
+     * 【杨辉三角】                        {@link LeetCode118}
+     * 【杨辉三角 II】                     {@link LeetCode_cn_119}
+     * 【下降路径最小和】【三角形最小路径和】  {@link LeetCode_cn_931}{@link LeetCode_cn_120}
+     * 【不同路径】                       {@link LeetCode_cn_62}
+     *
      *  NO
-     * 【最大连续1的个数 II】                 {@link LeetCode_cn_487}
-     * 【乘积为正数的最长子数组长度】**         {@link LeetCode_cn_1567}
-     * 【经过一次操作后的最大子数组和】         {@link LeetCode_cn_1746}
-     * 【抛掷硬币】                          {@link LeetCode_cn_1230}
+     * 【最大连续1的个数 II】                  {@link LeetCode_cn_487}
+     * 【乘积为正数的最长子数组长度】**          {@link LeetCode_cn_1567}
+     * 【经过一次操作后的最大子数组和】          {@link LeetCode_cn_1746}
+     * 【抛掷硬币】                           {@link LeetCode_cn_1230}
+     * 【买卖股票的最佳时机 III】              {@link LeetCode_123}
+     * 【两个字符串的最小ASCII删除和】          {@link LeetCode_cn_712}
+     * 【单词拆分】 重点看DFS BFS              {@link LeetCode_cn_139}
+     * 【等差数列划分】                        {@link LeetCode_cn_413}
+     * 【解码方法】                           {@link LeetCode_cn_91}
+     * 【丑数 II】                           {@link LeetCode_cn_264}
+     * 【不同的二叉搜索树】                    {@link LeetCode_cn_96}
+     * 【矩阵区域和】**                      {@link LeetCode_cn_1314}{@link LeetCode_cn_304}
      *
      * =======================================1=======================================
-     * day7
-     * 【买卖的最佳时机】2                    {@link LeeCode121}
-     * 【买卖股票的最佳时机 II】2          {@link LeetCode_cn_122}
-     * 【买卖股票的最佳时机 III】2          {@link LeetCode_123}
-     * 【买卖股票的最佳时机 IV】2           {@link LeetCode_cn_188}
-     * 【不相交的线】                          {@link LeetCode_cn_1035}
-     * day8
-     * 【最佳买卖股票时机含冷冻期】2           {@link LeetCode_cn_309}
-     * 【买卖股票的最佳时机含手续费】2          {@link LeetCode_cn_714}
-     * 【两个字符串的最小ASCII删除和】          {@link LeetCode_cn_712}
-     * day9
-     * 【单词拆分】                       {@link LeetCode_cn_139}
-     * 【接雨水】                         {@link LeetCode_cn_42}
-     * day10
-     * 【等差数列划分】                     {@link LeetCode_cn_413}
-     * 【解码方法】                       {@link LeetCode_cn_91}
-     * day11
-     * 【丑数 II】                        {@link LeetCode_cn_264}
-     * 【不同的二叉搜索树】                   {@link LeetCode_cn_96}
-     * day12
-     * 【杨辉三角】                       {@link LeetCode118}
-     * 【杨辉三角 II】                    {@link LeetCode_cn_119}
-     * day13
-     * 【931. 下降路径最小和】               {@link LeetCode_cn_931}
-     * 【三角形最小路径和】                   {@link LeetCode_cn_120}
-     * day14
-     * 【矩阵区域和】                      {@link LeetCode_cn_1314}
-     * 【二维区域和检索 - 矩阵不可变】        {@link LeetCode_cn_304}
-     * day15
-     * 【不同路径】                       {@link LeetCode_cn_62}
      * 【不同路径 II】                    {@link LeetCode_cn_63}
      * day16
      * 【最小路径和】                      {@link LeetCode_cn_64}

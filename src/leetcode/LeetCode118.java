@@ -21,4 +21,23 @@ public class LeetCode118 {
         return list;
     }
 
+    public List<List<Integer>> generate1(int numRows) {
+        List<List<Integer>> res = new ArrayList();
+        res.add(new ArrayList<Integer>() {{
+            add(1);
+        }});
+        for (int i = 2; i <= numRows; i++) {
+            List<Integer> list = new ArrayList<>();
+            for (int j = 0; j < i; j++) {
+                if (j == 0 || j == i - 1) {
+                    list.add(1);
+                }
+                List<Integer> last = res.get(res.size() - 1);
+                list.add(last.get(j - 1) + last.get(j));
+            }
+            res.add(list);
+        }
+        return res;
+    }
+
 }
