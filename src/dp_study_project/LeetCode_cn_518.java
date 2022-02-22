@@ -5,7 +5,7 @@ public class LeetCode_cn_518 {
      * https://leetcode-cn.com/problems/coin-change-2/solution/dai-ma-sui-xiang-lu-518-ling-qian-dui-hu-q7gm/
      *
      * 这里要分清 【组合】与 【排列】 的区别
-     * 组合是不重复的  122
+     * 组合是不重复的,不讲究排列顺序  122
      * 排列是可以重复  212 221 122
      *
      * 组合
