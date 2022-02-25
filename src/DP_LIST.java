@@ -40,6 +40,8 @@ public interface DP_LIST {
      * 【判断子序列】*                      {@link LeetCode_cn_392}
      * 【最长公共子序列】                    {@link LeetCode_cn_1143}
      * 【零钱兑换】*                         {@link LeetCode_cn_322}
+     * 【组合总和 Ⅳ】                     {@link LeetCoed_cn_377}
+     * 【整数拆分】                       {@link LeetCode_cn_343}
      *
      *  NO
      * 【最大连续1的个数 II】                  {@link LeetCode_cn_487}
@@ -58,17 +60,11 @@ public interface DP_LIST {
      * 【最长回文子序列】**                    {@link LeetCode_cn_516}
      * 【零钱兑换 II】*                        {@link LeetCode_cn_518}
      * 【分割等和子集】*                        {@link LeetCode_cn_416}
+     * 【完全平方数】                      {@link LeetCode_cn_279}
      *
      * =======================================1=======================================
      * 【摆动序列】2**                       {@link LeetCode_cn_376}
      * 【编辑距离】                         {@link LeetCode_cn_72}
-     *
-     * day21
-     * 【组合总和 Ⅳ】                     {@link LeetCoed_cn_377}
-     * 【整数拆分】                       {@link LeetCode_cn_343}
-     * 【完全平方数】                      {@link LeetCode_cn_279}
-     *
-     *
      * =====================================================================
      * 【Word Break】                     {@link LeeCode139} DP
      * 【买卖的最佳时机】                   {@link LeeCode121} good
@@ -76,8 +72,6 @@ public interface DP_LIST {
      * 【杨辉三角】                        {@link LeetCode118}
      * 【买卖股票3】                       {@link LeetCode_123}
      *
-     *
-
      * 「力扣」上的 0-1 背包问题：
      *
      * 「力扣」第 416 题：分割等和子集（中等）；
