@@ -18,6 +18,7 @@ public interface Offer_Special {
      * 【剑指 Offer II 006. 排序数组中两个数字之和】                    {@link JZ_cn_006}
      * 【剑指 Offer II 007. 数组中和为 0 的三个数】                     {@link JZ_cn_007}
      * 【剑指 Offer II 008. 和大于等于 target 的最短子数组】*            {@link JZ_cn_008}
+     * 【剑指 Offer II 009. 乘积小于 K 的子数组】
      * 【剑指 Offer II 088. 爬楼梯的最少成本】                          {@link JZ_cn_088}
      * 【剑指 Offer II 012. 左右两边子数组的和相等】                       {@link JZ_cn_012}
      * 【剑指 Offer II 018. 有效的回文】                                 {@link JZ_cn_018}
