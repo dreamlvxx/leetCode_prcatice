@@ -73,7 +73,7 @@ public class TreeNodeTravelByIterator {
 
 
     /**
-     * 中序遍历--左右中
+     * 中序遍历--左中右
      * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/er-cha-shu-de-zhong-xu-bian-li-by-leetcode-solutio/
      *
      * @param root
@@ -84,6 +84,7 @@ public class TreeNodeTravelByIterator {
 
         //递归与迭代的区别就是递归隐式维护了一个栈，此处我们就模拟这个栈
         Stack<TreeNode> stack = new Stack<>();
+        // cur 只是标记的right节点，所以不会造成回退现象
         TreeNode cur = root;
 
         while (cur != null || !stack.empty()) {
