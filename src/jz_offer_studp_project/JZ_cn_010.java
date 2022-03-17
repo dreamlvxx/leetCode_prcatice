@@ -5,6 +5,12 @@ import java.util.HashMap;
 public class JZ_cn_010 {
 
 
+    /**
+     * https://leetcode-cn.com/problems/subarray-sum-equals-k/solution/de-liao-yi-wen-jiang-qian-zhui-he-an-pai-yhyf/
+     * @param nums
+     * @param k
+     * @return
+     */
     public int subarraySum1(int[] nums, int k) {
         if (nums.length == 0) {
             return 0;
