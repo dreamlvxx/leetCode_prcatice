@@ -53,7 +53,6 @@ public class Consumer_Productor {
         }
     }
 
-
     static class ProductThread extends Thread {
         Resourse resourse;
 
@@ -75,7 +74,6 @@ public class Consumer_Productor {
         }
     }
 
-
     public static void main(String[] args) {
         Resourse resourse = new Resourse();
 
@@ -84,7 +82,6 @@ public class Consumer_Productor {
         ConsumerThread con1 = new ConsumerThread(resourse);
         ConsumerThread con2 = new ConsumerThread(resourse);
         ConsumerThread con3 = new ConsumerThread(resourse);
-
 
         pro1.start();
         con1.start();
