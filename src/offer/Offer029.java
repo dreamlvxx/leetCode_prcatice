@@ -1,5 +1,7 @@
 package offer;
 
+import java.nio.ByteBuffer;
+
 /**
  * https://leetcode.cn/problems/4ueAj6/
  */

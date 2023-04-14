@@ -47,6 +47,7 @@ public interface Offer_Special {
      * 【剑指 Offer II 084. 含有重复元素集合的全排列 】*                         {@link JZ_cn_084}
      * Offer025                                 {@link offer.Offer026}
      * Offer029 排序的循环链表                     {@link offer.Offer029}
+     * Offer030                                 {@link offer.Offer030}
      *
      *
      *
