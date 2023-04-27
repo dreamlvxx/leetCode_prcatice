@@ -51,6 +51,7 @@ public interface Offer_Special {
      * Offer033                                 {@link offer.Offer033}
      * Offer035                                 {@link offer.Offer035}
      * Offer036                                 {@link offer.Offer036}
+     * Offer037                                 {@link offer.Offer037}
      *
      *
      *
