@@ -53,6 +53,7 @@ import leetcode.*;
  * Generate Parentheses         {@link LeeCode22} [递归,回溯]
  * Product of Array Except Self  {@link LeeCode227} [数学规律]
  * Subsets                      {@link LeeCode78} {递归，回溯}
+ * 柱状图中最大的矩形             {@link LeetCode084} [单调栈]
  * Maximum Depth of N-ary Tree
  * 【无序数组中位数】              {@link MediumNumber} 快排思想 + 二分查找
  */
